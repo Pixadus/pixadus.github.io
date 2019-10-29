@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Pixadus"
+theme = "pix"
+
+summaryLength = 40
