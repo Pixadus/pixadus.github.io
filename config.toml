@@ -1,0 +1,21 @@
+baseURL = "http://pixadus.github.io/"
+languageCode = "en-us"
+title = "Pixadus"
+theme = "m10c"
+
+[params]
+    author = "Parker Lamb"
+    description = "Do not go gentle into that good night."
+    
+    [params.style]
+        darkestColor = "#282e37"
+        darkColor = "#3d434c"
+        primaryColor = "#56d490"
+        lightColor = "#62de9a"
+        lightestColor = "#fff"
+[menu]
+    [[menu.main]]
+        identifier = "notes"
+        name = "notes"
+        url = "/notes/"
+        weight = -110
