@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{width=6cm,compat=1.9}
+\title{Lecture 27 - Review of Work}
+\author{Parker Lamb}
+\date{2019-11-14}
+\begin{document}
+\maketitle
+	A quick review of some concepts we covered during lecture 26:
+    \vspace{5mm}
+    \[
+        E_{i} = E_{f}
+    \] 
+    \[
+    E_{i} + W = E_{f}
+    \]
+    \begin{table}[h!]
+            \begin{center}
+                    \caption{Table of Force-to-Work Conversions}
+                    \begin{tabular}{l|c r} 
+                    \textbf{Force} & \textbf{1-D} & \textbf{N-D} \\
+                    \hline
+                    \emph{Const} & $F\Delta(x)$ & $\vec{F}\vec{\Delta(x)}$ \\
+                    \emph{Variable} & $\int_{x_{i}}^{x_{f}} Fdx$ & $\int_{x_{i}}^{x_{f}} \vec{F}\vec{dx}$ \\
+                    \end{tabular}
+            \end{center}
+    \end{table}
+    \[
+            \vec{a}.\vec{b} = abcos\theta
+    \] 
+    \[
+    = a_{x}b_{x}+a_{y}b_{y}+a_{z}+b_{z}
+    \] 
+    \[ 
+            F_{U} = -\frac{dU}{dx}
+    \] 
+    \par\noindent\rule{\textwidth}{0.2pt}
+    \vspace{3mm}
+    \textbf{Work, Friction and Heat:} \\
+    \vspace{2mm}
+    Friction drains system energy into 'waste' heat, or unusable energy. \\
+    \begin{enumerate}
+    	\item $W_{heat} = E_{f} - E_{i}$, $W$ will always be negative.
+        \item $E_{i} = E_{f} + \Delta(E)_{th}$ - Heat energy created by $F\Delta(x)$
+    \end{enumerate}
+    \par\noindent\rule{\textwidth}{0.2pt}
+    \vspace{3mm}
+    \textbf{Power:} rate of use of energy, measured in Watts: $W = 1 \frac{J}{s}$. \\
+    \[
+    P = \frac{dE}{dt} = \frac{\Delta(E)}{\Delta(t)}
+    \] 
+    \[
+    P = F*U
+    \]
+    or
+    \[
+    P = \vec{F}\vec{V} = FVcos\theta
+    \] 
+\end{document}
