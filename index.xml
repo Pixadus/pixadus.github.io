@@ -6,20 +6,10 @@
     <description>Recent content on Pixadus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Nov 2019 23:15:58 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 23:48:49 -0800</lastBuildDate>
     
 	<atom:link href="https://pixadus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Running Arch Linux on the System76 Oryx Pro 5</title>
-      <link>https://pixadus.github.io/posts/arch-linux-oryx-pro/</link>
-      <pubDate>Fri, 15 Nov 2019 23:15:58 -0800</pubDate>
-      
-      <guid>https://pixadus.github.io/posts/arch-linux-oryx-pro/</guid>
-      <description>Not too long ago, I picked myself up a System76 Oryx Pro to replace my HP Omen laptop. The Omen, despite being a powerful computer with some pretty high-grade components, had an HP-customized NVIDIA card on their laptop, something that did not play well with Linux NVIDIA drivers.
-The Oryx Pro was designed by System76, a company marketing itself as a designer of high-quality Linux laptops.</description>
-    </item>
     
     <item>
       <title>Notes</title>
@@ -27,7 +17,7 @@ The Oryx Pro was designed by System76, a company marketing itself as a designer 
       <pubDate>Mon, 11 Nov 2019 23:48:49 -0800</pubDate>
       
       <guid>https://pixadus.github.io/notes/</guid>
-      <description> Physics 161  Lecture 25 - Work in 1-D Lecture 26 - Work in Multiple Dimensions Lecture 27 - More on Energy Lecture 28 - Conservation of Momentum
+      <description> Physics 161  Lecture 25 - Work in 1-D Lecture 26 - Work in Multiple Dimensions Lecture 27 - More on Energy Lecture 28 - Conservation of Momentum Lecture 29 - Elastic Collisions in 1&amp;frasl;2 Dimensions
 Physics and Science Good Theoretical Physicist
   </description>
     </item>
