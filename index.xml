@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pixadus</title>
-    <link>http://pixadus.github.io/</link>
+    <link>https://pixadus.github.io/</link>
     <description>Recent content on Pixadus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Nov 2019 20:08:28 -0800</lastBuildDate>
     
-	<atom:link href="http://pixadus.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pixadus.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nikon D500 Cheat Sheet</title>
-      <link>http://pixadus.github.io/posts/d500-cheat-sheet/</link>
+      <link>https://pixadus.github.io/posts/d500-cheat-sheet/</link>
       <pubDate>Wed, 20 Nov 2019 20:08:28 -0800</pubDate>
       
-      <guid>http://pixadus.github.io/posts/d500-cheat-sheet/</guid>
+      <guid>https://pixadus.github.io/posts/d500-cheat-sheet/</guid>
       <description>Disclaimer: This sheet is being continuously updated. Quick Reference: Astrophotography:
  EM: M or bulb SS: 10&amp;rdquo; (higher allows for longer exposure, but obey the 500 rule. f/stop: 1.8 ISO: 1600 Enable live view on camera, focus on brightest object possible. (Use highest possible shutter speed &amp;amp; ISO values here).
 Exposure Mode: P (Program): D500 selects basic exposure settings, but allows for user modification of all values while still maintaining metered exposure (different light values for different areas of image depending on relative brightness)</description>
@@ -24,10 +24,10 @@ Exposure Mode: P (Program): D500 selects basic exposure settings, but allows for
     
     <item>
       <title>Notes</title>
-      <link>http://pixadus.github.io/notes/</link>
+      <link>https://pixadus.github.io/notes/</link>
       <pubDate>Mon, 11 Nov 2019 23:48:49 -0800</pubDate>
       
-      <guid>http://pixadus.github.io/notes/</guid>
+      <guid>https://pixadus.github.io/notes/</guid>
       <description> Physics and Science  Good Theoretical Physicist  </description>
     </item>
     
