@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://pixadus.github.io/posts/d500-cheat-sheet/</loc>
+    <loc>https://pixadus.github.io/posts/d500-cheat-sheet/</loc>
     <lastmod>2019-11-20T20:08:28-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://pixadus.github.io/</loc>
+    <loc>https://pixadus.github.io/</loc>
     <lastmod>2019-11-20T20:08:28-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://pixadus.github.io/posts/</loc>
+    <loc>https://pixadus.github.io/posts/</loc>
     <lastmod>2019-11-20T20:08:28-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://pixadus.github.io/notes/</loc>
+    <loc>https://pixadus.github.io/notes/</loc>
     <lastmod>2019-11-11T23:48:49-08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://pixadus.github.io/categories/</loc>
+    <loc>https://pixadus.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://pixadus.github.io/tags/</loc>
+    <loc>https://pixadus.github.io/tags/</loc>
   </url>
   
 </urlset>
