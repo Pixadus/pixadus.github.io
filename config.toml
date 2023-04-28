@@ -1,0 +1,12 @@
+# Site title
+title = "Andromeda"
+base_url = "https://blog.andromeda.is"
+description = "Photography journal theme for Zola"
+compile_sass = true
+theme = "andromeda"
+
+[extra]
+header_links = [
+    # {name = "Blog", url = "https://blog.andromeda.is/"}
+]
+favicon = "/images/favicon.ico"
