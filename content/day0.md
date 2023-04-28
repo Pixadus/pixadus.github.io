@@ -1,5 +1,5 @@
 +++
-title = "Day 0 - Getting equipped"
+title = "Day 0 - Preparations"
 date = 2023-04-25
 description = "Buying a bike and getting ready to go"
 extra = {header_img = "https://live.staticflickr.com/65535/52847330381_64a4c01828_c_d.jpg"}
