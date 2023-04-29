@@ -107,4 +107,4 @@ Later books may include Plato's Republic and Aurelius's Meditations - but I'll c
 
 There's much to do in the coming days. I'll write once more just on or just the day before of my departure. 
 
-To all of my friends and family and favorite people in the world, thanks for being part of my life. 
+To all of my friends and family and favorite people in the world, thanks for being part of my life. I love and adore you so much. 
