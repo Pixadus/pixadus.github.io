@@ -1,7 +1,7 @@
 +++
 title = "The Beginning"
 date = 2023-04-25
-description = "Melbourne, a bike named Stylo and supplies."
+description = "Backstory, Australia and Making Plans"
 extra = {header_img = "https://live.staticflickr.com/65535/52847330381_64a4c01828_b_d.jpg"}
 +++
 
