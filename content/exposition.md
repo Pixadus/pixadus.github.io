@@ -25,7 +25,7 @@ So, let's get started.
 
 This journal is where I'm going to be writing about my travels on my motorcycle in Australia, reading philosophy along the way and trying to learn how to live.
 
-Throughout this, I'll be working on my solar physics project under the guidance of Dr. Kevin Reardon and Dr. Gianna Cauzzi with LASP - so expect to see some fun tidbits of image processing and feature recognition here and there. 
+Throughout this, I'll be working on my solar physics project under the guidance of my mentors with LASP - so expect to see some fun technical bits soon.
 
 ---
 

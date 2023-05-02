@@ -9,4 +9,7 @@ theme = "andromeda"
 header_links = [
     # {name = "Blog", url = "https://blog.andromeda.is/"}
 ]
+license = "CC BY-NC 2.0"
 favicon = "/images/favicon.ico"
+email = "parker@plamb.com"
+name = "Parker Lamb"
