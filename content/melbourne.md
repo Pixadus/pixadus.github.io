@@ -128,6 +128,30 @@ Tomorrow morning at 8:30 AM I'm taking it in to get the Australian Roadworthy Ce
 
 Fingers crossed 🤞. 
 
+#### May 3, 2023
+
+I got the roadworthy back. 
+
+> Residual anxiety loops through my mind. 
+
+At least, an *invoice* for the roadworthy.
+
+> I can't afford this shit. 
+
+$1,600 AUD worth of repairs and labor. Apparently, the previous owner removed the bolts securing the rear wheel cover to the frame, in order to fit a larger wheel. Not only does that suddenly make it very much *not roadworthy*, it's dangerous and feels ... stupid. Like, **actually though**? You needed a bigger wheel badly enough that you remove some lets-keep-the-bike-from-disintegrating bolts?
+
+So. Need a new tire. New brake pads. Brake fluid. Number plate is secured with ropes instead of bolts. Clutch is a bit stuck. 
+
+Also, the foot pedals are aftermarket. And apparently not super great aftermarket. Bad enough that they also need to be swapped. 
+
+> Ugh. 
+
+Common sense says, no way. I can repair these things myself. Foot pedals? Psh. Ebay. Tire? Has to be cheaper than $300 somewhere. 
+
+And then I remember, right. I'm in Australia. It's ... harder to ship things here. Don't have many tools to work with either, nor a garage. 
+
+So ... yeah. I'm going to sleep on it. Stressed and a bit nerve-wracked now - not a great state to make decisions in. Is $1600 worth it? Avoid the hassle? Maybe. Just, a lot. 
+
 ## Chromospheric fibrils (the solar physics bit)
 
 I'll probably be talking a lot about this particular subject in the coming days, so I figured I'd start now. As of today (April 30, 2023), my current employment is a remote research position with the **Laboratory for Atmospheric and Space Physics** (LASP), working with **Dr. Kevin Reardon** and **Dr. Gianna Cauzzi**, on the identification and classification of **chromospheric fibrils**, curvilinear features that can be found on H-alpha width images of the surface of the sun.
