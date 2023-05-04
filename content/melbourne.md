@@ -150,7 +150,29 @@ Common sense says, no way. I can repair these things myself. Foot pedals? Psh. E
 
 And then I remember, right. I'm in Australia. It's ... harder to ship things here. Don't have many tools to work with either, nor a garage. 
 
-So ... yeah. I'm going to sleep on it. Stressed and a bit nerve-wracked now - not a great state to make decisions in. Is $1600 worth it? Avoid the hassle? Maybe. Just, a lot. 
+So ... yeah. I'm going to sleep on it. Stressed and a bit nerve-wracked now - not a great state to make decisions in. Is $1600 worth it? Avoid the hassle? Maybe. 
+
+#### May 4, 2023
+
+I woke up this morning feeling a bit worried from yesterday and anxious - but, with a plan in mind. I took the tram up to the shop that had been working on the bike - the one with the $1,600 quote. Talked with them a bit. They seemed eager to get started on it. 
+
+I look at the bike. The changes feel ... cosmetic? This feels wrong. Foot pedals and a cover? I sigh. Tell the mechanic I can't afford the repairs - I'll pay him for the inspection. $160 for the inspection. I drove it back to the IMAX garage. 
+
+Brooded for a bit. 
+
+> There's no way there's no space under the cover. 
+
+I check beneath it. It's tight. My fingers barely wedge in between the cover and the wheel. But there definitely is space.
+
+Drove it up to a hardware store a few miles away. Bought some 2" stainless steel bolts and nuts. 
+
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52869205179_30c43229df_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52869205179_684b13b8f9_c_d.jpg"></a>
+</div>
+
+Bolted the cover back on. It's secure - the nuts might chafe a bit if I hit a large bump, but that should be rare the tire gets that far up. 
+
+$450 fix done for $27 AUD worth of stainless steel bolts. Okay. Okay. I can do this. I need to sort out new pedals and brake fluid and disc brakes. 
 
 ## Chromospheric fibrils (the solar physics bit)
 
