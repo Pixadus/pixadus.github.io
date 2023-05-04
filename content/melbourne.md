@@ -154,15 +154,9 @@ So ... yeah. I'm going to sleep on it. Stressed and a bit nerve-wracked now - no
 
 #### May 4, 2023
 
-I woke up this morning feeling a bit worried from yesterday and anxious - but, with a plan in mind. I took the tram up to the shop that had been working on the bike - the one with the $1,600 quote. Talked with them a bit. They seemed eager to get started on it. 
+Woke up this morning. **Determined**. Took the tram up to the mechanic. Got the bike back. $160 for inspection, that's okay. 
 
-I look at the bike. The changes feel ... cosmetic? This feels wrong. Foot pedals and a cover? I sigh. Tell the mechanic I can't afford the repairs - I'll pay him for the inspection. $160 for the inspection. I drove it back to the IMAX garage. 
-
-Brooded for a bit. 
-
-> There's no way there's no space under the cover. 
-
-I check beneath it. It's tight. My fingers barely wedge in between the cover and the wheel. But there definitely is space.
+Step 1. The rear cover is loose. I can fix this. 
 
 Drove it up to a hardware store a few miles away. Bought some 2" stainless steel bolts and nuts. 
 
@@ -172,7 +166,9 @@ Drove it up to a hardware store a few miles away. Bought some 2" stainless steel
 
 Bolted the cover back on. It's secure - the nuts might chafe a bit if I hit a large bump, but that should be rare the tire gets that far up. 
 
-$450 fix done for $27 AUD worth of stainless steel bolts. Okay. Okay. I can do this. I need to sort out new pedals and brake fluid and disc brakes. 
+$450 fix done for $27 AUD worth of stainless steel bolts. 
+
+Now. Need to sort out the foot pedals, buy new pads for the rear disc brake, tighten the clutch, secure the license plate and get some new brake fluid. Then retry the roadworthy. 
 
 ## Chromospheric fibrils (the solar physics bit)
 
