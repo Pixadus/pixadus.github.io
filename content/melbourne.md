@@ -1,7 +1,7 @@
 +++
 title = "Day 0 - Melbourne"
 date = 2023-04-30
-description = "Preparations, solar physics, the city of Melbourne"
+description = "Preparations & the city of Melbourne"
 extra = {header_img = "https://live.staticflickr.com/65535/52863015427_a6b1046493_c_d.jpg"}
 +++
 
