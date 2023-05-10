@@ -152,23 +152,52 @@ And then I remember, right. I'm in Australia. It's ... harder to ship things her
 
 So ... yeah. I'm going to sleep on it. Stressed and a bit nerve-wracked now - not a great state to make decisions in. Is $1600 worth it? Avoid the hassle? Maybe. 
 
-#### May 4, 2023
+#### May 9, 2023
 
-Woke up this morning. **Determined**. Took the tram up to the mechanic. Got the bike back. $160 for inspection, that's okay. 
+After doing a healthy bit of panicking on the cost, sat down and did some thinking. Stared at the bike a bit. Read a few online posts. Looked at it some more. Nah. $1600. I could do this for way less. 
 
-Step 1. The rear cover is loose. I can fix this. 
+Here's a review of the past few days. 
 
-Drove it up to a hardware store a few miles away. Bought some 2" stainless steel bolts and nuts. 
+The rear cover, I ended up securing with some 2" stainless steel bolts.
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52869205179_30c43229df_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52869205179_684b13b8f9_c_d.jpg"></a>
 </div>
 
-Bolted the cover back on. It's secure - the nuts might chafe a bit if I hit a large bump, but that should be rare the tire gets that far up. 
+I did some looking about online, and found out the default Honda Shadow footpeg was really nothing more than a long metal pole with some rubber sitting on it - you can see it in the far left image below. 
 
-$450 fix done for $27 AUD worth of stainless steel bolts. 
+So, given I already had a long metal pole, all I needed was the rubber! Fixed it with some little rubber door stoppers from Bunnings. 
 
-Now. Need to sort out the foot pedals, buy new pads for the rear disc brake, tighten the clutch, secure the license plate and get some new brake fluid. Then retry the roadworthy. 
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52882959094_2c26c8cb61_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52882959094_2c26c8cb61_o_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52882287962_acfcd0a524_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52882287962_1650e742d1_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52883264703_9df439dd74_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52883264703_d138cd573b_c_d.jpg"></a>
+</div>
+
+Brake pads were a bit more of a purchase, but only $40 for the pads, fluid, tube and a bottle of *delectable* orange juice which, once empty, was used to store the old brake fluid. 
+
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52883262203_fc17c393e7_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52883262203_c245282cc5_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52882282577_dcba964c99_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52882282577_52c7f4d96c_c_d.jpg"></a>
+</div>
+
+Finally, the rear plate. Grabbed some bolts and a $10 reflector. 
+
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52883233260_ce8eab89bc_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52883233260_b95c54e2bc_c_d.jpg"></a>
+</div>
+
+Took the cycle back in for the RWC. 
+
+Flying colors. 
+
+**Boom** 😎. 
+
+Anyway. Next step, is to register it. I just discovered that registration timeslots are actually booked out for weeks - which, *colossal* ugh. I'm trying to get in touch with the original seller of the motorcycle to see if he'd be willing to renew and transfer - saving a ton of time and effort. 
+
+#### May 10, 2023
+
+Renewed the registration and transferred it today. Here ... we go. 
 
 ## Chromospheric fibrils (the solar physics bit)
 
