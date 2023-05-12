@@ -7,8 +7,6 @@ extra = {header_img = "https://live.staticflickr.com/65535/52888110969_25bf93204
 
 ## Back in Melbourne
 
-I know, not what you were expecting, was it? Unpredictability is a skill of mine, I'll have you know. 
-
 I got going last night, heading east. A bit late in the day, around 3 PM - following registration, had to snag insurance and make sure things were tight and kosher. My first destination was to grab sleeping gear - I still needed a tent + sleeping bag, since luggage weight limits from Jetstar prevented me from bringing my backpacking gear from home. 
 
 After doing some research, I ended up deciding on a **swag**. "What is a swag?" you might ask! Oh, boy let me tell you. 
