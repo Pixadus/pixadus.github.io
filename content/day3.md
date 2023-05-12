@@ -1,10 +1,14 @@
 +++
-title = "Day 4 - Repairs and Saddlecrates"
-date = 2023-05-13
+title = "Day 3 - Repairs and Saddlecrates"
+date = 2023-05-12
 description = "Troubleshooting and designing new saddlebags"
-extra = {header_img = "https://live.staticflickr.com/65535/52888110969_25bf932042_k_d.jpg"}
-draft = true
+extra = {header_img = "https://wrongreel.com/wp-content/uploads/2015/10/Matt-Damon-in-The-Martian-Movie-Wallpaper.jpg"}
+draft = false
 +++
+
+>  I guess you could call it a "failure", but I prefer the term "learning experience".
+
+>                   - The Martian, Andy Weir
 
 We have two big things to address: the **cargo situation** and the **shutdown issue**. 
 
@@ -23,7 +27,7 @@ Let's start off with cargo. I think I may have been a *bit* overzealous in terms
 #### Wants
 
 * **Work**: iPad for doodling. 
-* **Entertainment**: DJI Mavic Mini 2, 600mm lens
+* **Entertainment**: DJI Mavic Mini 2, 600mm lens, spare battery
 * **Day-to-day**: One extra pair of clothes
 * **Nutrititon**: An additional water bottle
 
@@ -46,3 +50,12 @@ I bet we could do this with two 30L containers. I really love the feel of the Ta
 **Hypotheses**: 
 * The fuel system has dirt or debris in it - a fouled filter, a dirty carb, or the air intake tube is clogged. 
 * The spark plugs are old. 
+* There is a loose wire with the ignition system. 
+
+**Experiments**:
+* Pull out spark plugs. See if they show evidence of being fouled. Do this with a torque wrench to ensure proper tightening. 
+* Run motorcycle, then drain each carb using carb drain. Check to see how much fuel flows out of each. 
+* Pull off fuel hose from carb, crank engine with fuel hose pointed to can. Check to see how much fuel flows out to see if problem is with fuel pump or fuel filter. 
+* Check reluctor coils behind clutch for broken wires (may lead to trouble with spark ignition). 
+* Clean air filter. Isn't particularly dirty but may be inhibiting air flow. 
+* Ensure fuel petcock is not blocked. Check both lines. 
