@@ -1,5 +1,5 @@
 +++
-title = "Day 3 - Repairs and Saddlecrates"
+title = "Day 3 - Repairs and Cargo"
 date = 2023-05-12
 description = "Troubleshooting and designing new saddlebags"
 extra = {header_img = "https://wrongreel.com/wp-content/uploads/2015/10/Matt-Damon-in-The-Martian-Movie-Wallpaper.jpg"}
@@ -45,7 +45,7 @@ I bet we could do this with two 30L containers. I really love the feel of the Ta
 
 **The Problem**: The motorcycle's engine coughs, then looses power until RPMs reach zero and the engine dies. 
 
-**Supporting observations**: These power losses do not, at a glance, seem to be correlated to speed or particular RPMs. When restarting the engine, the starter button needs to be held for a few moments. The engine turns over for much longer than it does when cold-starting before catching, usually taking between 3-6 seconds. 
+**Supporting observations**: These power losses do not, at a glance, seem to be correlated to speed or particular RPMs. When restarting the engine, the starter button needs to be held for a few moments. The engine turns over for much longer than it does when cold-starting before catching, usually taking between 3-6 seconds. When the engine first starts from a cold state, it catches immediately but will run rough for a few moments until warm - misfires are common. 
 
 **Hypotheses**: 
 * The fuel system has dirt or debris in it - a fouled filter, a dirty carb, or the air intake tube is clogged. 
