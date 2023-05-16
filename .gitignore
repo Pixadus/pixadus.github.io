@@ -3,3 +3,6 @@ public/
 
 # Ignore 'ignore' directory
 ignore/
+
+# Ignore images symlink in work dir
+content/work/images/
