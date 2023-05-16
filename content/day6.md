@@ -6,6 +6,16 @@ extra = {header_img = "https://live.staticflickr.com/65535/52898815818_0d3d8b018
 draft = false
 +++
 
+## Pictures
+
+> I walk down the street, melodies dancing their way out of my headphones. It's nighttime. A light dust of water covers the city - too light to be considered proper rain, too wet to be fog alone. There's something surreal about midnight in the big cities - activity becomes localized. Nightclubs and bars are centers of frenzied energy, while the rest of the city slows down and pauses, like a small lull in a techno-symphonatic orchestra. 
+
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52898532779_5d449a7a52_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52898532779_46fc4b87fa_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52898815818_0d3d8b0189_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52898815818_98fe7be923_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52900733642_1b37f47789_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52900733642_265700fa5d_c_d.jpg"></a>
+</div>
+
 ## Motorcycle
 
 I just learned something about the motorcycle.
