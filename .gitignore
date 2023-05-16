@@ -1,2 +1,5 @@
 # Ignore public directory
 public/
+
+# Ignore 'ignore' directory
+ignore/
