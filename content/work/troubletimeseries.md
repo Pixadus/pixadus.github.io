@@ -53,12 +53,31 @@ I'll probably go near-sighted just trying to make out these little images. But, 
 
 ![Hessian and meijering filters](/images/work/hessian-meijering.png)
 
-Let's go with the Hessian. We can deal with the large white blobs by just intersecting the image with the otsu tracing - leading to 
+Let's go with the Hessian. Now - the Hessian matrix is a brilliant idea in image processing. If you've taken multivariable calculus or linear algebra before, you might remember it - mathematically, the Hessian can be represented as 
+
+$$\vec{H}_f = \begin{bmatrix} \frac{\delta I^2}{\delta x^2} & \frac{\delta I^2}{\delta x\delta y} \\\ \frac{\delta I^2}{\delta y\delta x} & \frac{\delta I^2}{\delta y^2} \end{bmatrix}$$
+
+In our context, this matrix describes the **second order intensity variations** around a given pixel. The eigenvalues of that Hessian matrix per pixel can then be used to evaluate the "local intensity curvature" - [this article does a much better job of explaining it](https://milania.de/blog/Introduction_to_the_Hessian_feature_detector_for_finding_blobs_in_an_image) than I can.  
+
+We can deal with the large white blobs by just intersecting the image with the otsu tracing - leading to 
 
 ![Hessian segmentations](/images/work/hessians.png)
 
----
+If we try out OCCULT-2 on this, 
 
-**Note**: Leaving this off for today because feeling hungry - tomorrow, let's see what we can do with the Hessian, and work to understand the underlying mathematics behind it.  
+![Occult on Hessian](/images/work/occult_hessian.png)
 
----
+It's hard to say if it's better or worse. Many well-defined features are shared, some are lengthened, and some are gotten rid of entirely. Still - the entire goal of this tinkering was to reduce the impact of varied seeing conditions. If we try to compare the two timeseries now ...
+
+![Slower comparison](/images/work/slow.gif)
+
+Or, faster,
+
+![Fast comparison](/images/work/fast.gif)
+
+
+At this point, I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
+
+![ACWE Segmentation](/images/work/acwe_segmentation.png). 
+
+We can clean this up a lot, though. Let's try reducing how noisy our result from the Hessian is.
