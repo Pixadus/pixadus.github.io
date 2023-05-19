@@ -75,6 +75,7 @@ Or, faster,
 
 ![Fast comparison](/images/work/fast.gif)
 
+Graphing OCCULT-2 fibrils along this sequence (along frames 62-87 for starters, as they have particularly high seeing),
 
 At this point, I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
 
