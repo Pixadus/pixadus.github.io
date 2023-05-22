@@ -75,10 +75,20 @@ Or, faster,
 
 ![Fast comparison](/images/work/fast.gif)
 
-Graphing OCCULT-2 fibrils along this sequence (along frames 62-87 for starters, as they have particularly high seeing),
+Graphing OCCULT-2 fibrils along this sequencee, 
+
+![OCCULT-2 over timeseries (slow)](/images/work/occult-slow.gif)
+
+Faster,
+
+![OCCULT-2 over timeseries (fast)](/images/work/occult-fast.gif)
+
+We see OCCULT recognizes many of the same fibrils and holds them relatively constant over time ... but many are extremely short lived, even where we can visually observe them still existing. In this scenario, it's likely OCCULT itself that is failing to recognize the existence of them.
 
 At this point, I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
 
-![ACWE Segmentation](/images/work/acwe_segmentation.png). 
+![ACWE Segmentation](/images/work/acwe_segmentation.png)
+
+I think creating another alternative to OCCULT's tracing will be important for our results. 
 
 We can clean this up a lot, though. Let's try reducing how noisy our result from the Hessian is.
