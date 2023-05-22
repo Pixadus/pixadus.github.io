@@ -6,6 +6,30 @@ extra = {header_img = "https://live.staticflickr.com/65535/52916335748_5edb9351b
 draft = false
 +++
 
+---
+
+> You are not trapped, though it may feel that way. 
+> 
+> You are not in a tunnel and there is no light - you are on a field. 
+> 
+> A light rain fills the air. There is wind sometimes, and it is cold. 
+> 
+> Behind you are the mountains and valleys of your life.
+>
+> Some are forbidding and barren. Others, filled with grass and brilliant flowers. 
+>
+> Ahead of you, there's a fog. 
+>
+> The future is opaque.
+>
+> The past is behind you. 
+>
+> You step into the fog. 
+
+---
+
+## Take Two
+
 Tomorrow, I'm going to start off again. 
 
 > Thoughts of my last attempt filter through my mind. I feel my heart speed up just a bit. Ugh. 
@@ -49,26 +73,8 @@ Refining ...
 
 Aristotle & co. will help for the last question. The first three are ones that I think I can only address by thought, reading, writing and action. I think each question deserves its own answer - something I'm not prepared to give as of yet, though I have some guiding ideas. 
 
-And, one last thing. 
+That said ... I've been thinking a lot about where I want to be. And I have some really clear ideas right now.
 
----
+Dream life? Right now? I want to be doing **research**. Or tinkering with some fascinating front-line engineering projects - building Martian probes and rovers or sending stuff into deep space. 
 
-> You are not trapped, though it may feel that way. 
-> 
-> You are not in a tunnel and there is no light - you are on a field. 
-> 
-> A light rain fills the air. There is wind sometimes, and it is cold. 
-> 
-> Behind you are the mountains and valleys of your life.
->
-> Some are forbidding and barren. Others, filled with grass and brilliant flowers. 
->
-> Ahead of you, there's a fog. 
->
-> The future is opaque.
->
-> The past is behind you. 
->
-> You step into the fog. 
-
----
+Space, is, the final frontier. It offers nearly limitless possiblity, and in an optimistic world so much of humanity's future is going to be dedicated to it. And space is *fucking awesome*, excuse my French but it's true. 
