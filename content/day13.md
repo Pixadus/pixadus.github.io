@@ -34,7 +34,7 @@ No matter what, once I finish this, I can't allow it to be for nothing. I don't 
 
 So. Questions. Questions I'd like to answer along the way, or start formulating answers to.
 
-* What do I give a shit about? 
+* What things actually matter?
 * Where do I want to be? Later this year? 20 years from now?
 * What's important in the world? 
 * How can I be the best person I possibly can be? Is there a difference between that person and the person I am now?
