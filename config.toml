@@ -1,7 +1,7 @@
 # Site title
 title = "Andromeda"
 base_url = "https://blog.andromeda.is"
-description = "Photography journal theme for Zola"
+description = "Motorcycles, philosophy and a journey up the Australian east coast."
 compile_sass = true
 theme = "andromeda"
 
