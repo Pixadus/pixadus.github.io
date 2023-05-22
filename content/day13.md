@@ -38,13 +38,15 @@ Tomorrow, I'm going to start off again.
 
 > Thoughts of my last attempt filter through my mind. I feel my heart speed up just a bit. Ugh. 
 
-I'll head east, following the A1 and side roads, though I'd like to demo the M1 and see how the bike reacts to the highway.
+I'll head east, following the A1 and side roads, though I'd like to try out the M1 and see how the bike reacts to the highway.
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52916431798_467e3ea617_o_d.png" data-ngthumb="https://live.staticflickr.com/65535/52916431798_467e3ea617_o_d.png"></a>
 </div>
 
-Targeting a shorter journey for now - leaving plenty of time to find a place to sit and log a bit of work in there, as well as the opportunity to arrive at my destination while it's still light out. 
+I'll be doing shorter stints, at least at first. I'm not used to riding motorcycles for long periods of time, and I want to be sure to get some hours of work, reading and exploration in during the day. 
+
+These next few weeks are going to be curious. 
 
 My posts from now are probably going to become a bit scattered, as I can't anticipate what the coming days will look like. I promise to take a lot of pictures for you though. 
 
@@ -70,10 +72,14 @@ So. Questions. Questions I'd like to answer along the way, or start formulating 
 
 Refining ...
 
+---
+
 * What do I care about?
 * Where do I want to be?
 * What's important?
 * What is better and how can I get there?
+
+---
 
 Aristotle & co. will help for the last question. The first three are ones that I think I can only address by thought, reading, writing and action. I think each question deserves its own answer - something I'm not prepared to give as of yet, though I have some guiding ideas. 
 
@@ -81,4 +87,12 @@ That said ... I've been thinking a lot about where I want to be. And I have some
 
 Dream life? Right now? I want to be doing **research**. Or tinkering with some fascinating front-line engineering projects - building Martian probes and rovers or sending stuff into deep space. 
 
-Space, is, the final frontier. It offers nearly limitless possiblity, and in an optimistic world so much of humanity's future is going to be dedicated to it. And space is *fucking awesome*, excuse my French but it's true. 
+Space, is, the final frontier. It offers nearly limitless possiblity, and in an optimistic world so much of humanity's future is going to be dedicated to it. 
+
+And, space is *fucking awesome*, excuse my French but it's true. 
+
+<div class="gallery">
+    <a href="https://stsci-opo.org/STScI-01G8H1K2BCNATEZSKVRN9Z69SR.png" data-ngthumb="https://stsci-opo.org/STScI-01G8H1NK4W8CJYHF2DDFD1W0DQ.png"></a>
+</div>
+
+(SMACS 0723. Most objects in the picture are galaxies - the one in the center is 4.24 billion light years out, while Earth is 4.54 billion years old - so, the light from this galaxy was *first emitted only 300 million years after the formation of the Earth*.)
