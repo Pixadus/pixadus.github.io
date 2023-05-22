@@ -18,6 +18,8 @@ I'll head east, following the A1 and side roads, though I'd like to demo the M1 
 
 Targeting a shorter journey for now - leaving plenty of time to find a place to sit and log a bit of work in there, as well as the opportunity to arrive at my destination while it's still light out. 
 
+My posts from now are probably going to become a bit scattered, as I can't anticipate what the coming days will look like. I promise to take a lot of pictures for you though. 
+
 ## Questions
 
 > Life before death, strength before weakness, journey before destination.
