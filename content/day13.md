@@ -20,9 +20,13 @@ draft = false
 >
 > Ahead of you, there's a fog. 
 >
+> ...
+>
+> The past is behind you.
+>
 > The future is opaque.
 >
-> The past is behind you. 
+> ...
 >
 > You step into the fog. 
 
