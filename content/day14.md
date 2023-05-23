@@ -81,9 +81,11 @@ Tonight, following a few hours of work, I'm going to sit down and read up on som
 
 **Golden Beach, 9:38 PM**
 
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=147.38740682601932%2C-38.221964943757044%2C147.39105463027957%2C-38.219318256928396&amp;layer=mapnik&amp;marker=-38.220641612377726%2C147.3892307281494" style="border: 1px solid black"></iframe>
+
 Oh my god, *please* no more night driving. That was ... incredibly cold. Driving at 50 mph through fog with "summer edition perforated leather gloves, on sale for only $99.99 AUD!" was ... nooooo thanks. 
 
-But, I made it. Golden Coast. I saw my first kangaroo! Actually quite a few of them, on each side of the road. 
+But, I made it. Golden Beach. I saw my first kangaroo! Actually quite a few of them, on each side of the road. 
 
 They're remarkably graceful.
 
