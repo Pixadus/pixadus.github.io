@@ -2,23 +2,40 @@
 title = "Day 14 - Departure 2.0"
 date = 2023-05-23
 description = "Two weeks belated! It's go time 🚀"
-extra = {header_img = "https://live.staticflickr.com/65535/52916335748_5edb9351b5_k_d.jpg"}
+extra = {header_img = "https://live.staticflickr.com/65535/52919596623_a8d2bf4d8b_k_d.jpg"}
 draft = false
 +++
-
-<!-- 
-
---- -->
 
 **Melbourne, 11:38 AM**
 
 Bike is packed and ready to go! 
 
-**Bin one** (The soft stuff):  I've got two pairs of clothes, toiletries, swimsuit, a tiny ratchet set, itty bitty stove, as well as an array of nuts and bolts that would put a small-town hardware store to shame. 
+**Bin one** (The soft stuff): 
+* Two pairs of clothes
+* Toiletries
+* Swimsuit
+* Tiny ratchet set 
+* Itty bitty stove
+* An array of nuts and bolts that would put a small-town hardware store to shame
 
-**Bin two** (hardcore 😎): Camera, 35mm lens, 14-200mm lens, DJI Mavic Mini 2, iPad, laptop, chargers, headphones, Kindle, important bits and bobs, headlamp and an REI faux Camelbak backpack with 3L water.
+**Bin two** (hardcore 😎): 
+* Camera + 35mm lens
+* 14-200mm lens
+* DJI Mavic Mini 2
+* iPad
+* Macbook
+* Chargers
+* Headphones
+* Kindle
+* Headlamp
+* REI faux Camelbak backpack with 3L water
 
-**The rack**: tent + sleeping bag.
+**The Rack**: 
+* Tent
+* Sleeping bag
+* Weight :'(
+
+I think I have everything. At least, minimal everything. Really, really wish I got a smaller tent. 
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52919299744_b3078ca4b8_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919299744_5ef38bb286_c_d.jpg"></a>
@@ -50,8 +67,6 @@ Sleeping to the sound of waves has so many therapeutic properties. I can't wait.
     <a href="https://live.staticflickr.com/65535/52919294654_7bc828c2cd_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919294654_357f528673_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52919135946_7f95411cd6_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919135946_f774e7da0c_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52919294634_4d7ba198b4_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919294634_177e0750dc_c_d.jpg"></a>
-    <!-- <a href="https://live.staticflickr.com/65535/52919299744_b3078ca4b8_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919299744_5ef38bb286_c_d.jpg"></a>
-    <a href="https://live.staticflickr.com/65535/52919299744_b3078ca4b8_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52919299744_5ef38bb286_c_d.jpg"></a> -->
 </div>
 
 In other news, I'm just about finished with **The Martian**, by Andy Weir (I know, I know, I've got a backlog of books which like *thank god*. Expansive reading lists are all part of a Healthy and Balanced Breakfast™, but this one was prompted by The Martian movie night at Selina St. Kilda, so I of course had to read it). 
