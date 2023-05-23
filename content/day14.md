@@ -33,7 +33,7 @@ Bike is packed and ready to go!
 **The Rack**: 
 * Tent
 * Sleeping bag
-* Weight :'(
+* Weight :'(w
 
 I think I have everything. At least, minimal everything. Really, really wish I got a smaller tent. 
 
@@ -76,3 +76,23 @@ I'm on Sol 484, and Mark's on his way to Schiaparelli Crater. Holy crap, and I t
 Which, like, YAY! Fictional Martian solar panel saddlebags!
 
 Tonight, following a few hours of work, I'm going to sit down and read up on some more Aristotle, and maybe some Lord of the Rings. I've never seen the extended editions before, though the soundtrack is ass-kicking. 
+
+---
+
+**Golden Beach, 9:38 PM**
+
+Oh my god, *please* no more night driving. That was ... incredibly cold. Driving at 50 mph through fog with "summer edition perforated leather gloves, on sale for only $99.99 AUD!" was ... nooooo thanks. 
+
+But, I made it. Golden Coast. I saw my first kangaroo! Actually quite a few of them, on each side of the road. 
+
+They're remarkably graceful.
+
+I don't know why that surprises me. I think when I imagine two-legged jumping creatures I think of humans, and though there are a (very select) few members of our species that could be described as graceful, the rest of us ... 
+
+Anyway. It's late. I'm ... feeling a bit lonely, and a little isolated. I think it's mostly because of my arrival time. Should try transitioning into a morning person - early sunset and early sunrise may require a change in schedule. 
+
+> If love is the answer, you're home. 
+
+I miss home.
+
+Goodnight.
