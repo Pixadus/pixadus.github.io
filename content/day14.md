@@ -33,7 +33,7 @@ Bike is packed and ready to go!
 **The Rack**: 
 * Tent
 * Sleeping bag
-* Weight :'(w
+* Weight :'(
 
 I think I have everything. At least, minimal everything. Really, really wish I got a smaller tent. 
 
