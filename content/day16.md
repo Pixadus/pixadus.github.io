@@ -1,7 +1,7 @@
 +++
 title = "Day 16 - Stars, Lakes and Wind"
 date = 2023-05-25
-description = "Waxing philosophical, Steve's place and more repairs."
+description = "The elements, Steve's place and more repairs."
 extra = {header_img = "https://live.staticflickr.com/65535/52921884471_4c165adc82_k_d.jpg"}
 draft = false
 +++
