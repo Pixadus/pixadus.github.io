@@ -71,9 +71,9 @@ $$
 \frac{24001-23837}{10.12} = 19.71\ \text{km/L} = 46.36\ \text{mpg}
 $$
 
-You'll notice the sharp change in fuel economy from the first measurement to the later three. And this is actually super cool - 23477 was the last time I refilled with a broken carb. Fixing the carb meant cleaning out the jets, so more fuel could get through - which decreased fuel economy significantly it seems. I'm thinking this could be because of:
+You'll notice the sharp change in fuel economy from the first measurement to the later three. And this is actually super cool - 23477 was the last time I refilled with a broken carb. Fixing the carb meant cleaning out the jets, so more fuel could get through. For the change in fuel economy, in order of how significant I think they're affecting it,
 
-1. The increased (cleaned) diameter of the main jet - I'm no longer restricted to 1/2 throttle
+1. The increased (cleaned) diameter of the main carb jet - I'm no longer restricted to 1/2 throttle
 2. Hilly and mountainous terrain for the previous couple hundred kilometers
 3. I'm driving with a full cargo load
 
