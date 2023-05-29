@@ -85,10 +85,39 @@ Faster,
 
 We see OCCULT recognizes many of the same fibrils and holds them relatively constant over time ... but many are extremely short lived, even where we can visually observe them still existing. In this scenario, it's likely OCCULT itself that is failing to recognize the existence of them.
 
-At this point, I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
+This is ... *okay*. We could work with this. But, we're able to transform the image such that it has visibly consistent feature regions - having something more robustly able to detect these centerlines would be preferrable. 
+
+I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
 
 ![ACWE Segmentation](/images/work/acwe_segmentation.png)
 
-I think creating another alternative to OCCULT's tracing will be important for our results. 
+And with the [find_contours](https://scikit-image.org/docs/stable/auto_examples/edges/plot_contours.html) method, 
 
-We can clean this up a lot, though. Let's try reducing how noisy our result from the Hessian is.
+![ACWE and contour methods](/images/work/acwe-contours.png)
+
+MorphACWE creates more "normalized" areas by virtue of doing some image transformations to smooth out regions - the contour method, by contrast, finds *every* area where the image intensity goes from 0 -> 1, and makes a polygon out of it. 
+
+I think we could achieve some good results by doing a contour evolution - but only with some preprocessing done to smooth out discontinuous features and remove smaller dots. 
+
+Our current Hessian result has the following problems:
+
+1. Fibrils that are visibly supposed to be connected are slightly disconnected (see bottom left). 
+2. Fibrils are very "jagged", and have a lot of pepper rather than being continuous blobs. 
+3. Some fibrils are being connected, despite being disconnected.
+4. Snow (tiny features) scatter the image. 
+
+#### 1 - Connect fibrils & help with pepper
+
+We can do this by smoothing the image out, or "fattening" light regions. Let's try out a Gaussian first. 
+
+![Gaussian hessian](/images/work/gausshess.png)
+
+If we apply another Otsu filter to get back to a binary image, 
+
+![Gaussian otsu](/images/work/gaussian-otsu.png)
+
+Let's tinker with the sigma value a bit. If we start to plot our contours now, we see
+
+![Gaussian contours](/images/work/gauss-cntrs.png)
+
+Much smoother, and some previously non-joined fibrils are now joined. Let's try to calculate some centerlines through these by using the [label_centerlines library](https://github.com/ungarj/label_centerlines). 
