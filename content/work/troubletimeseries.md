@@ -116,8 +116,26 @@ If we apply another Otsu filter to get back to a binary image,
 
 ![Gaussian otsu](/images/work/gaussian-otsu.png)
 
-Let's tinker with the sigma value a bit. If we start to plot our contours now, we see
+If we start to plot our contours now, we see
 
 ![Gaussian contours](/images/work/gauss-cntrs.png)
 
 Much smoother, and some previously non-joined fibrils are now joined. Let's try to calculate some centerlines through these by using the [label_centerlines library](https://github.com/ungarj/label_centerlines). 
+
+**Note**: Offstage, I've been really trying to bring out every single visually identifiable fibril, which I really just don't think is possible with an algorithmic approach. Neural networks might do a bit better. But still, we'll try to work with this Gaussian contours setup. I think we can come up with something good. 
+
+Okay. Label centerlines. This library is designed to work with [shapely Polygons](https://shapely.readthedocs.io/en/stable/reference/shapely.Polygon.html) - and our find_contours function just returns lists of points in (x,y) format, so polygon conversion is nice and easy.
+
+![Label contours for both the base Hessian and gaussian version](/images/work/label_centerlines_hessgauss.png)
+
+find_contours detected 1285 contours of length > 1 for the base Hessian, and only 314 for the Gaussian. 
+
+Still, the centerlines in both are acceptable, overall. The Gaussian version seems to more consistently trace out longer fibrils, since regions are combined - but that comes with a cost, as we see some fibrils (see the longer one to the top-center) are "melded" into others and combined into a single Polygon. 
+
+So ... questions:
+
+1. Can we segment these lines better, and avoid overlap? 
+2. Can we use the gradient to encourage better individual line segmentation?
+3. Do any skimage filters help with this task?
+
+Label_centerlines does a great job - exactly what we're looking for. Just need to make the Polygons individually distinguishable. 
