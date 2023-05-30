@@ -6,6 +6,20 @@ extra = {header_img = "https://live.staticflickr.com/65535/52936292667_ada70a0b0
 draft = false
 +++
 
+Hi again. 
+
+Some of you have been wondering about a notification system - trust me, I've been thinking about it for a bit too. 
+
+I decided against it on the ride here today. Our lives are filled up with so many things *constantly* demanding our attention. Texts, calls, email, pop-up notifications and social media and correspondance and "hey, shop here!" ...
+
+I don't want this journal to demand attention. 
+
+This should be, I hope, a familiar presence - a home, for thoughts and dreams. 
+
+This post, as I'm intending to be the case later on, is divided between the Journey and, later, just some pictures along the way. 
+
+Thank you for sticking with me this far. Sorry if I'm delayed in responding. Tomorrow, I'm hoping to sit down and spend some time corresponding. 
+
 ## The Journey
 
 **Bateman's Bay, May 29 1:57 PM**
@@ -29,7 +43,7 @@ I'm about 4 hours 30 minutes out from Sydney! I think I might be able to get the
 
 Check these nerds out. 
 
-I really love kangaroos. They're quiet and peaceful. They keep to themselves, and tend to maintain a distance from human civilization. I want to study them more over the coming weeks. 
+I really love kangaroos. They're quiet and peaceful. They keep to themselves, and tend to maintain a distance from human civilization. I hope to see more of them over the coming weeks. 
 
 Also - I'm realizing I haven't gotten a good shot of my camping setup since day 1 - so, behold:
 
