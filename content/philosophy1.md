@@ -1,5 +1,5 @@
 +++
-title = "Philosophy - Part I"
+title = "Philosophy - On Happiness"
 date = 2023-06-01
 description = "Happiness, hexis and the beautiful."
 extra = {header_img = "https://live.staticflickr.com/65535/52944211186_ee1bb2e1fc_k_d.jpg"}
@@ -70,13 +70,13 @@ Of the **social** part ... this is a topic I remain unsteady and unsure about.
 
 I firmly believe it is important to maintain a small circle of close friends, who you feel improve your Self and you may improve their Selves in turn. I am incredibly fortunate to have individuals of this type in my life. 
 
-I don't know if it's important to have a significant other or not. This has been a topic I've oscillated on; relationships of this nature can either be tremendously constructive to one's life, or tremendously destructive. I am, however, starting to become convinced of the value of having an **equal** in your life that you **love**, and who **loves you** in turn. This person must be, without reservation, *good for you* in your mind, and visa versa.
+I don't know if it's important to have a significant other or not. This has been a topic I've oscillated on; relationships of this nature can either be tremendously constructive to one's life, or tremendously destructive. I am, however, starting to become convinced of the value of having an **equal** in your life that you love, and who loves you in turn. This person must be, without reservation, *good for you* in your mind, and visa versa.
 
 I want to talk about this idea of an S.O. further, but not now. 
 
 In regards to family - yes. Find the people who will love and support you without reservation or love withheld - they are your family. 
 
-Finally, of the **spiritual** component - this is what I seek to understand now. In an ideal life, these are the **principals** that direct your every single action, your **ideals** and things you aspire to, and the overarching concepts which guide your life. In a sense, this is the most important category, for the other two are subject to it - but development in all three is, I believe, necessary for this idea of wholeness.
+Finally, of the **spiritual** component - this is what I seek to understand now. In an ideal life, these are the **principles** that direct your every single action, your **ideals** and things you aspire to, and the overarching concepts which guide your life. In a sense, this is the most important category, for the other two are subject to it - but development in all three is, I believe, necessary for this idea of wholeness.
 
 #### The Beautiful and Serious
 

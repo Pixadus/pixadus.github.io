@@ -57,6 +57,6 @@ I'm hoping to return tonight once more - I haven't used my flying camera yet, an
 >
 >               - The Left Hand of Darkness, Ursula K. Le Guin
 
-It is rare to have found such a beautiful soul.
+One who tried to lead the best life he could - who dedicated himself to mankind and the betterment of Winter, and to the nobility he found in another. Someone who was reservedly passionate; who lived deliberately and with intent in all things; who did what had to be done; who believed in the world and his people; who was flawed and not always successful; yet full and more beautifully whole than most. Mature in disposition; fundamentally human. 
 
 Farewell, Estraven. 
