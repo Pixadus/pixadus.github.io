@@ -1,7 +1,7 @@
 +++
 title = "Philosophy - Part I"
 date = 2023-06-01
-description = "Happiness, hexis and how you live your life."
+description = "Happiness, hexis and the beautiful."
 extra = {header_img = "https://live.staticflickr.com/65535/52944211186_ee1bb2e1fc_k_d.jpg"}
 draft = false
 +++
