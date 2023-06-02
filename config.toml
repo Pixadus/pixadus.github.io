@@ -7,7 +7,7 @@ theme = "andromeda"
 
 [extra]
 header_links = [
-    # {name = "Blog", url = "https://blog.andromeda.is/"}
+    {name = "Quotes", url = "https://blog.andromeda.is/quotes"}
 ]
 license = "CC BY-NC 2.0"
 favicon = "/images/favicon.ico"
