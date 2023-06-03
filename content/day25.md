@@ -24,7 +24,7 @@ Thank you, all of you. Your kindness means the world to me.
 
 Australia seems to have a thing about huge libraries.
 
-Better if made entirely from stone and marble; and even moreso if they boast colossal corinthian columns out front and have all the regality of an ancient palace of old.
+Better if made entirely from stone and marble; and even moreso if they boast ionic columns out front and have all the regality of an ancient palace of old.
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52946886265_2276d5e39e_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52946886265_5f7a782382_c_d.jpg"></a>
