@@ -97,18 +97,9 @@ And with the [find_contours](https://scikit-image.org/docs/stable/auto_examples/
 
 MorphACWE creates more "normalized" areas by virtue of doing some image transformations to smooth out regions - the contour method, by contrast, finds *every* area where the image intensity goes from 0 -> 1, and makes a polygon out of it. 
 
-I think we could achieve some good results by doing a contour evolution - but only with some preprocessing done to smooth out discontinuous features and remove smaller dots. 
+I think we could achieve some good results by doing a contour evolution.
 
-Our current Hessian result has the following problems:
-
-1. Fibrils that are visibly supposed to be connected are slightly disconnected (see bottom left). 
-2. Fibrils are very "jagged", and have a lot of pepper rather than being continuous blobs. 
-3. Some fibrils are being connected, despite being disconnected.
-4. Snow (tiny features) scatter the image. 
-
-#### 1 - Connect fibrils & help with pepper
-
-We can do this by smoothing the image out, or "fattening" light regions. Let's try out a Gaussian first. 
+So, let's try to smooth the image out, "fattening" light regions. Let's try out a Gaussian first. 
 
 ![Gaussian hessian](/images/work/gausshess.png)
 
@@ -120,7 +111,7 @@ If we start to plot our contours now, we see
 
 ![Gaussian contours](/images/work/gauss-cntrs.png)
 
-Much smoother, and some previously non-joined fibrils are now joined. Let's try to calculate some centerlines through these by using the [label_centerlines library](https://github.com/ungarj/label_centerlines). 
+Much smoother, and some previously non-joined fibrils are now joined. However - this is an issue as well, as now we have some close distinct fibrils that are now joined together, which we don't necessarily want. That said - let's try to calculate some centerlines through these by using the [label_centerlines library](https://github.com/ungarj/label_centerlines). 
 
 **Note**: Offstage, I've been really trying to bring out every single visually identifiable fibril, which I really just don't think is possible with an algorithmic approach. Neural networks might do a bit better. But still, we'll try to work with this Gaussian contours setup. I think we can come up with something good. 
 
@@ -128,14 +119,6 @@ Okay. Label centerlines. This library is designed to work with [shapely Polygons
 
 ![Label contours for both the base Hessian and gaussian version](/images/work/label_centerlines_hessgauss.png)
 
-find_contours detected 1285 contours of length > 1 for the base Hessian, and only 314 for the Gaussian. 
+label_centerlines did a good job - but, our individual fibril distinctions are lacking. 
 
-Still, the centerlines in both are acceptable, overall. The Gaussian version seems to more consistently trace out longer fibrils, since regions are combined - but that comes with a cost, as we see some fibrils (see the longer one to the top-center) are "melded" into others and combined into a single Polygon. 
-
-So ... questions:
-
-1. Can we segment these lines better, and avoid overlap? 
-2. Can we use the gradient to encourage better individual line segmentation?
-3. Do any skimage filters help with this task?
-
-Label_centerlines does a great job - exactly what we're looking for. Just need to make the Polygons individually distinguishable. 
+We need a way to make each fibril distinct. Is there a filter which says "hey, this is a region of distinctly linear features"? I wonder if something like a Laplacian would help. 
