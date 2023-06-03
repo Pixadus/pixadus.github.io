@@ -8,7 +8,7 @@ draft = false
 
 Hello, you -
 
-Following the news about the tent theft, I've recieved assistance from so many unexpected quarters, from you - sufficient to fully recover from the loss of it.  
+Following the news about the tent theft, I've recieved assistance from so many unexpected quarters - sufficient to fully recover from the loss of it.  
 
 I do not know how to adequately express my graditude for this generosity. Which sucks, because I want to hug each and every one of you and laugh and cry. 
 
