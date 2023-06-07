@@ -49,3 +49,9 @@ draft = false
 > People would do anything rather than admit their lives have no meaning. No use, that is. No plot. 
 >
 >               - Offred in The Handmaid's Tale, Margaret Atwood
+
+---
+
+> To oppose something is to maintain it. [...] To oppose vulgarity is inevitably to be vulgar. You must go somewhere else; you must have another goal; then you walk a different road. 
+>
+>               - Estraven, the Left Hand of Darkness

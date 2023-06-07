@@ -87,6 +87,8 @@ We see OCCULT recognizes many of the same fibrils and holds them relatively cons
 
 This is ... *okay*. We could work with this. But, we're able to transform the image such that it has visibly consistent feature regions - having something more robustly able to detect these centerlines would be preferrable. 
 
+## skimage segmentation
+
 I played around with some of [skimage's segmentation methods](https://scikit-image.org/docs/stable/api/skimage.segmentation.html) (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the **morphological Chan-Vese** algorithm in skimage), resulting in
 
 ![ACWE Segmentation](/images/work/acwe_segmentation.png)
@@ -119,6 +121,16 @@ Okay. Label centerlines. This library is designed to work with [shapely Polygons
 
 ![Label contours for both the base Hessian and gaussian version](/images/work/label_centerlines_hessgauss.png)
 
-label_centerlines did a good job - but, our individual fibril distinctions are lacking. 
+label_centerlines did exactly what we asked of it - but, there's some definite issues with **unrelated features** being joined (see left center) and some **single** features *not* being correctly joined (see bottom left).
 
-We need a way to make each fibril distinct. Is there a filter which says "hey, this is a region of distinctly linear features"? I wonder if something like a Laplacian would help. 
+We can try some [morphological transforms](https://scikit-image.org/docs/stable/api/skimage.morphology.html) to help with this. [Dilations](https://scikit-image.org/docs/stable/auto_examples/applications/plot_morphology.html#dilation) blow up light areas, while [erosions](https://scikit-image.org/docs/stable/auto_examples/applications/plot_morphology.html#erosion) reduce light areas. Focusing on the bottom left $(110\times90)$ px region,
+
+![d1e1](/images/work/d1e1.png)
+
+Great! Except, now ...
+
+![d1e12](/images/work/d1e12.png)
+
+![Luz](https://media.tenor.com/Vu4cdN5l0dQAAAAC/the-owl-house-luz.gif)
+
+I know. I know! I ought to have expected it. Dilations will close small spaces, and will not distinguish between spaces between disconnected fibrils and separate features.
