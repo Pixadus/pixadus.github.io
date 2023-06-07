@@ -107,7 +107,7 @@ I'm going to move on. Perhaps an answer will become apparent later, but allowing
 
 > One who is happy is said to live well, and do well. 
 
-**Do well** - to encourage intent behind every action, and to them with quality.
+**Do well** - to encourage intent behind every action, and to act with beauty/grace/nobility, and with quality.
 
 **Live well** - to live completely, the act of "doing well" applied to life. Have close and good friends, work and hobbies you enjoy, and live in accordance with the values that you want to guide your life. 
 

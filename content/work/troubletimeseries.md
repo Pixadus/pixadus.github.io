@@ -134,3 +134,35 @@ Great! Except, now ...
 ![Luz](https://media.tenor.com/Vu4cdN5l0dQAAAAC/the-owl-house-luz.gif)
 
 I know. I know! I ought to have expected it. Dilations will close small spaces, and will not distinguish between spaces between disconnected fibrils and separate features.
+
+Okay.
+
+Let's think. Ideally, we'd find a filter that could connect broken lines. This, however, doesn't distinguish between features above and below. So ... let's be more active in our approach. 
+
+**Step 1** - get rid of little tiny features (snow and little dark spots). This can be done with morphological transforms or with skimage's [remove_small_holes function](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.remove_small_holes) (try inversion?). 
+
+**Step 2** - make all features distinguishable from one another. Erosion?
+
+**Step 3** - Get contours & centerlines, minimizing curvature along the way. Each centerline should be a relatively straight line. 
+
+**Step 4** - Create a dictionary of contours + matching centerlines. 
+
+**Step 5** - Connect centerlines which have approximately same parameters by merging their associated polygons. 
+
+---
+
+#### Step 1 - Small Holes
+
+![Dilation, small hole fill, small object removal](/images/work/dial-sh-so.png)
+
+Dilated (`square=1`), filled small holes (`s=64`), removed small objects (`s=10`) (**Note**: any larger small object size removed parts of fibrils). 
+
+#### Step 2 - Distinguishable
+
+---
+
+**Aside**
+
+What if we did a polyfit on larger polygons? Take an average over all polygon sizes; those that are greater than the average, do a polyfit, add smaller polygons to them. 
+
+This is an interesting idea. Let's try it. 
