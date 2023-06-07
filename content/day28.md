@@ -119,6 +119,20 @@ It's an extremely high-level framework; and not specific enough to provide easy 
 
 Identify them when they come up, and don't fear them. It may only be there are no satisfying answers in the present; move on. 
 
+---
+
+> Be honest and speak truth. 
+
+**Verbally**, **emotionally** and **mentally**. 
+
+This is something that doesn't come to me easily. 
+
+Further,
+
+> Trust the truth when it is found. 
+
+It's easy to learn something, then disregard it in favor of a comforting illusion. 
+
 ## Flametouched
 
 <div class="gallery">
