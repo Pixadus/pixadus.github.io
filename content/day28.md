@@ -12,7 +12,7 @@ Hi again,
 
 If I'm late in responding to your email, forgive the delay. Most of the time, I'm best able to talk when in cities - and these can be far apart in both time and distance. 
 
-Trust me, I read every one and smile. Thanks for staying with me this long :) 
+Trust me, I read every one with pleasure. 
 
 ## The Journey
 
