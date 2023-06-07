@@ -2,8 +2,8 @@
 title = "Day 29 - Squatting"
 date = 2023-06-07
 description = "Ownership laws are more what you'd call ... guidelines, than actual rules anyway."
-extra = {header_img = "https://live.staticflickr.com/65535/52955960232_6bb2bfd5da_k_d.jpg"}
-draft = true
+extra = {header_img = "https://live.staticflickr.com/65535/52956432737_0cde88bb9a_k_d.jpg"}
+draft = false
 +++
 
 ## Woolgoolga
@@ -25,15 +25,21 @@ Beautiful city. Alluring headland. Terrific ~~campsite~~. Whales. Dolphins. Suns
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52956007077_ac5766ba65_o_d.gif" data-ngthumb="https://live.staticflickr.com/65535/52956007077_ac5766ba65_o_d.gif"></a>
 </div>
+<div class="gallery" style="margin-top: -1em;">
+    <a href="https://live.staticflickr.com/65535/52957030996_b31a5d9f7d_o_d.gif" data-ngthumb="https://live.staticflickr.com/65535/52957030996_b31a5d9f7d_o_d.gif"></a>
+</div>
 
 ## Photo dump
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/52956942975_bf6ef3c7a9_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52956942975_abc8196d8d_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52957413200_fe42415da8_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52957413200_896d17bc25_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52957012253_dec5d6f190_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52957012253_a265cc0abc_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52956560001_60846779ae_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52956560001_fb0e5c462d_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52957031151_19b1d9e804_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52957031151_f7e512db44_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52955960232_4503d112f1_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52955960232_41530ff8e7_c_d.jpg"></a>
     <a href="https://live.staticflickr.com/65535/52957010503_58235856de_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52957010503_bb93229af8_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52957174694_d2a0c135de_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52957174694_f000ee0fc9_c_d.jpg"></a>
 </div>
 
 And, from the Anna Bay Sand Dunes, 
