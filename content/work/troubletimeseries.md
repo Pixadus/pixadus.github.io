@@ -137,32 +137,102 @@ I know. I know! I ought to have expected it. Dilations will close small spaces, 
 
 Okay.
 
-Let's think. Ideally, we'd find a filter that could connect broken lines. This, however, doesn't distinguish between features above and below. So ... let's be more active in our approach. 
-
-**Step 1** - get rid of little tiny features (snow and little dark spots). This can be done with morphological transforms or with skimage's [remove_small_holes function](https://scikit-image.org/docs/stable/api/skimage.morphology.html#skimage.morphology.remove_small_holes) (try inversion?). 
-
-**Step 2** - make all features distinguishable from one another. Erosion?
-
-**Step 3** - Get contours & centerlines, minimizing curvature along the way. Each centerline should be a relatively straight line. 
-
-**Step 4** - Create a dictionary of contours + matching centerlines. 
-
-**Step 5** - Connect centerlines which have approximately same parameters by merging their associated polygons. 
-
----
-
-#### Step 1 - Small Holes
+Let's think. Easiest to address - first - our features are pretty grainy, and there's a lot of small holes everywhere. Let's try dealing with that first.
 
 ![Dilation, small hole fill, small object removal](/images/work/dial-sh-so.png)
 
-Dilated (`square=1`), filled small holes (`s=64`), removed small objects (`s=10`) (**Note**: any larger small object size removed parts of fibrils). 
+Dilated (`square=1`), filled small holes (`s=64`), removed small objects (`s=10`) (**Note**: any larger small object size removed parts of fibrils).
 
-#### Step 2 - Distinguishable
-
----
-
-**Aside**
+Now.
 
 What if we did a polyfit on larger polygons? Take an average over all polygon sizes; those that are greater than the average, do a polyfit, add smaller polygons to them. 
 
 This is an interesting idea. Let's try it. 
+
+![Polyfit results](/images/work/polyfit.png)
+
+Nice! Cool thought. Still - the broken-up-ness of individual features is making the lines curly and go all over the place. I did some further reading into [skimage's filters](https://scikit-image.org/docs/stable/api/skimage.filters.html) - and there are some that could help with this, such as the Meijering (I know, I dismissed it earlier in favor of the Hessian - but what if we did both?)
+
+![Meijering results](/images/work/meijering.png)
+
+`sigma=(1,7,1)`. Adding a median filter to make things a bit less contrasty, and thresholding to disconnect some unrelated features, we get 
+
+![Thresholded meijering](/images/work/threshold_filt.png)
+
+This looks .. okay. Pretty jagged as a whole. Still, I did more reading on models other than threshold-based contouring to match edges, and did further reading into Morphological ACWE. The [old github page on Morphsnakes](https://github.com/pmneila/morphsnakes) has some pretty sweet animations, too - 
+
+![Morphsnakes](https://github.com/pmneila/morphsnakes/raw/master/examples/anim_dendrite.gif)
+![Morphsnakes 2](https://github.com/pmneila/morphsnakes/raw/master/examples/anim_europe.gif)
+
+Which made me quite interested in trying them out once more, as they could be used to deal with this jaggedness. 
+
+![MorphACWE and MorphGAC](/images/work/morphres.png)
+
+ACWE (cyan) with checkerboard set `s=4` and `i=10`, GAC (blue) with thresholded version of Meijering as level set (`t=0.3`), `i=1`, `b=0`.
+
+Better results from ACWE so far. 
+
+---
+
+Another day, another night of background thoughts. I'm worried the amount of processing we've already done will lead to seeing affecting the ability for morphsnakes to ID fibrils significantly. Still - we'll address that soon. MorphACWE has done a great job with only `i=10` - but, I think we can make it do better. Things to try today: 
+
+1. Create level set from thresh (better)
+2. Create level set out of local mins and maxes
+3. Try local thresholding following initial otsu to better define fibrils
+4. Visualize evolution of morphsnakes in all scenarios using morphsnake callback
+
+Let's try out some different level sets with MorphGAC.
+
+1. `base=filt1, init_ls = filt1>0.3`
+2. `base=inv_gauss_grad, init_ls=filt1>0.3`
+3. `base=filt1, init_ls=extrema.local_maxima`
+<p>
+    <img src="/images/work/evo1.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/evo2.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/evo3.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+</p>
+
+And trying ACWE (`base=(filt1[filt1 < 0.33] = 0)`)
+1. `init_ls = filt1>0.3` 
+2. `init_ls = checkerboard_level_set s=2` 
+3. `init_ls = morphology.extrema.local_maxima`
+
+<p>
+    <img src="/images/work/acwe1.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/acwe2.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/acwe3.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+</p> 
+
+**GAC 2** and **ACWE 2** are best so far; though I intend on playing around with both types later. If we can get a more dense seed pattern, ACWE 3 yields promising results. 
+
+Now, changes in seeing. This isn't a bad issue - **except** - for issues that become apparent such as in GAC 3, where features above and below combine. This will happen - so we need to find a way to prevent 2+ fibrils from "merging" into one due to closeness. 
+
+Is there a way to quantify the linearity of polygons? Or ... can we divide a polygon into two maximum-area subpolygons? ... Some brief reading online leads me to believe this a challenging problem. 
+
+Which, circles back to optimizing ACWE further. If we can encourage a style similar to ACWE3, except with more seed points ... let's try to find more seed points. Or, smooth further?
+
+---
+
+Unfortunately, further optimization of the Hessian yielded little improvement. The main issue is the gap **between** some fibrils is equal to the gap **along** fibrils - so any work to close these gaps along also causes gaps between to be closed, and active contouring isn't designed to do any distinguishing here. 
+
+Also of note - the fibrils are barely distinguishable from one another in the initial image itself - so further optimization here might not do much ... unless ... we increase the offset in the otsu thresholding even further ... no, that just results in more noise, unfortunately. If we try [Sauvola thresholding](https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_niblack_sauvola.html) and the [local otsu](https://scikit-image.org/docs/stable/api/skimage.filters.rank.html#skimage.filters.rank.otsu) as an alternative to the [global otsu](https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding_guide.html), 
+
+![Local thresholding](/images/work/local_thresholds.png)
+
+(`window_size=45` in both cases). The Hessians then look like
+
+![Local hessians](/images/work/local_hessians.png)
+
+Interesting. Hmm. Comparing the global and local thresholding for Otsu,
+
+![Global vs Local Otsu](/images/work/otsus.png)
+
+with a corresponding Meijering for the local `sigmas=range(1,5,1)` of
+
+![Local Meijering](/images/work/meijering_local.png)
+
+... I don't think any amount of local filtering is going to help us here. The only thing that comes to mind is that we have to split large polygons into sub-polygons depending on their curvature.
+
+Ugh.
+
+Fine.
