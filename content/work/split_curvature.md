@@ -20,16 +20,34 @@ First, we present a selected set of combined fibrils that demonstrate this probl
 
 ![The Shape](/images/work/shape/initshape.png)
 
-Let's try to visualize the curvature at every point. [Curvature](https://openstax.org/books/calculus-volume-3/pages/3-3-arc-length-and-curvature) can be defined as 
+Let's try to visualize the curvature at every point. [Curvature](https://en.wikipedia.org/wiki/Curvature#Graph_of_a_function) can be defined for a parameterized curve as
 
 $$
-k = \Big\lVert \frac{d \boldsymbol{T}}{ds} \Big\rVert = | \boldsymbol{T}'(s)|
+k = \frac{|x'y''-y'x''|}{\left(x'^2-y'^2\right)^{3/2}}
 $$
 
-where $d\boldsymbol{T}/ds$ is the change in the unit tangent vector per change in length. It can more easily be written 
+For our parameterization, we have points separated by $t=0.5$, and $f(t) = (x(t),y(t))$. After working this calculation out in code, we get
 
-$$
-k=\frac{d\theta}{ds} = \frac{\theta_2-\theta_1}{ds}
-$$
+![Curvature estimation 1](/images/work/shape/curv_est_1.svg)
 
-where $\theta = \arctan{\frac{dy}{dx}}$ and $ds$ is the Euclidian distance between two given points. Since points in our image are spaced at intervals of 0.5, let's check every four points for curvature. 
+It looks like it worked great! However, there are some points where the "rough terrain" along our curve increase local curvature where it shouldn't be. Let's smooth our data out by using a [Savitzky-Golay filter](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.savgol_filter.html) (with `win_size=20` & `deg=3` polynomial).
+
+![Cuvature estimation 2](/images/work/shape/curv_est_2.svg)
+
+Let's isolate these curvature extrema.
+
+![Curvature extrema](/images/work/shape/curv_extrema.svg)
+
+At this point, it'd be prudent to visualize what we'd ideally & realistically like this to turn into following curvature estimation. 
+
+![Ideal](/images/work/shape/ideal_curv_extrema.svg)
+
+I say "ideal" - though it isn't, as we see some fibrils cut off early. However, it's important to keep in mind *how* we go about this process. My thoughts are,
+
+1. High-curvature areas should only match with curves across a **closed** shape (the line drawn between must lie inside the polygon, rather than outside). 
+2. The closest ID'd matching curve must have some **minimum arc-length distance** away from the initial curve, to avoid matching along the initial curve or those beside it. 
+3. When a shape is matched, get rid of nearby on-line identified curves to prevent **oversegmentation**. 
+
+**Note**: Notice the blue line as well - we'll need to find a way to try preventing this. Also, need to specify a criterion for this high-curvature segmentation - minimum area? Don't want to segment everything. 
+
+**Note 2**: Occam's razor says I'm overcomplicating this whole situation. It's something to keep in mind - but I want to try developing this method out today and tomorrow. Eventually, I might need to call a halt to it and just proceed with what we already have. 
