@@ -1,7 +1,7 @@
 +++
-title = "Splitting Curves"
+title = "Curvature-based segmentation"
 date = 2023-06-12
-description = "Splitting curves based on curvature."
+description = "Splitting up polygons based on curvature."
 extra = {header_img = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2F153966444a731fabeef805f08abf3de6%2Ftenor.gif%3Fitemid%3D15755119&f=1&nofb=1&ipt=6f267753d0ece331a54896fe0d69868375ea213cd6bbb6c8834ec5960979ba8e&ipo=images"}
 draft = false
 +++
@@ -48,6 +48,40 @@ I say "ideal" - though it isn't, as we see some fibrils cut off early. However, 
 2. The closest ID'd matching curve must have some **minimum arc-length distance** away from the initial curve, to avoid matching along the initial curve or those beside it. 
 3. When a shape is matched, get rid of nearby on-line identified curves to prevent **oversegmentation**. 
 
-**Note**: Notice the blue line as well - we'll need to find a way to try preventing this. Also, need to specify a criterion for this high-curvature segmentation - minimum area? Don't want to segment everything. 
+**Note**: Notice the blue lines as well - these are unideal consequences of this method. Need to consider how to deal with these. Also, need to add a "minimum area" filter - maybe "if below mean area, don't do curvature segmentation?"
 
-**Note 2**: Occam's razor says I'm overcomplicating this whole situation. It's something to keep in mind - but I want to try developing this method out today and tomorrow. Eventually, I might need to call a halt to it and just proceed with what we already have. 
+---
+
+After applying the three criterion, we get this:
+
+![Cutting curvature part 1](/images/work/shape/cc1.svg)
+
+As you can see, it needs some work. 
+
+**First thing**: I'm checking for the midpoint between points to see if it lies within the shape. This isn't quite enough - so let's interpolate along the line between curvatures, say, 10 times, and check to see if all of those points lie within instead.  
+
+![Cutting curvature part 2](/images/work/shape/cc2.svg)
+
+Much better. **Second thing**, we have connections reaching all the way across the shape. Let's add a `max_spatial_distance=20` parameter. 
+
+![Cutting curvature part 3](/images/work/shape/cc3.svg)
+
+Next, let's add some support for our shape in the middle. 
+
+![Cutting curvature part 4](/images/work/shape/cc4.svg)
+
+---
+
+Okay - finally, let's make sure our subdivided polygons aren't too small. We'll take a look at every connection and subdivide the Polygon based on that, using Shapely's [split](https://shapely.readthedocs.io/en/stable/manual.html#shapely.ops.split) function, then check the area of each with a flat minimum area of `min_area=300` pixels for now. 
+
+![Cutting curvature part 5](/images/work/shape/cc5.svg)
+
+Taking a look at the segmentation, 
+
+![Cutting curvature part 6](/images/work/shape/cc6.svg)
+
+It looks like the segmentation isn't working properly on interior shapes. Taking a look at the documentation for the `split` function, we see:
+
+> If the splitter does not split the geometry, a collection with a single geometry equal to the input geometry is returned.
+
+Since we're splitting then moving on to the next line, then we're just returning the original shape for both of the lines connecting to the hole.

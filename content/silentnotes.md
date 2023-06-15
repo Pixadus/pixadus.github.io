@@ -77,3 +77,9 @@ Trust yourself. Trust in your self, trust your mind, trust your thoughts.
 You don't have enough time to second-guess everything. 
 
 I'm going to trust in you, reader, if you're reading this. 
+
+---
+
+I lost faith in myself at some point. In what I believed in; in what I wanted from life, and my ability to achieve it. I don't think there was a defined *split* - a crack in the facade, a moment where everything broke. Just a slow burn, a slow transformation from solid wood to smoke and air. 
+
+Can I consciously regain that? ... I suppose I must. 
