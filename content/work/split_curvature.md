@@ -85,3 +85,11 @@ It looks like the segmentation isn't working properly on interior shapes. Taking
 > If the splitter does not split the geometry, a collection with a single geometry equal to the input geometry is returned.
 
 Since we're splitting then moving on to the next line, then we're just returning the original shape for both of the lines connecting to the hole.
+
+---
+
+Doing some work to get the script to recognize our two segments, I first tried to use a [convex hull](https://shapely.readthedocs.io/en/stable/reference/shapely.convex_hull.html) between the two lines, then find the intersection between the hull and the shape itself. 
+
+![Cutting curvature part 7](/images/work/shape/cc7.svg)
+
+It recognized our shape! Yay! Except ... it looks weird. The convex hull intersection may not really be what we're looking for. Since we have the individual coordinate points of the shapes themselves, let's just construct a shape composed of the two lines and the segments connecting the four verticies. This is more complicated in setup, but simplier in design. 
