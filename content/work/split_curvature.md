@@ -92,4 +92,10 @@ Doing some work to get the script to recognize our two segments, I first tried t
 
 ![Cutting curvature part 7](/images/work/shape/cc7.svg)
 
-It recognized our shape! Yay! Except ... it looks weird. The convex hull intersection may not really be what we're looking for. Since we have the individual coordinate points of the shapes themselves, let's just construct a shape composed of the two lines and the segments connecting the four verticies. This is more complicated in setup, but simplier in design. 
+It recognized our shape! Yay! Except ... it looks weird. The convex hull intersection may not really be what we're looking for. Since we have the individual coordinate points of the shapes themselves, let's just construct a shape composed of the two lines and the segments connecting the four verticies. More complicated in setup, but simplier in design. 
+
+After wrangling with list comprehension for some time, 
+
+![Cutting curvature part 8](/images/work/shape/cc8.svg)
+
+**Boom**. An untested, generalized approach to curvature-based segmentation of polygons! Let's implement this in a class, then return to our timeseries segmentation. We'll likely have to refine our model some in practice, but the broad strokes are there to be worked with. 

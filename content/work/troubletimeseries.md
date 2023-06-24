@@ -236,3 +236,12 @@ with a corresponding Meijering for the local `sigmas=range(1,5,1)` of
 Ugh.
 
 Fine.
+
+---
+
+Tracing out centerlines **without** our [curvature segmentation](/work/split-curvature/) and parameters `max_paths=10, smooth_sigma=13`, we find
+
+![no curvature segmentation](/images/work/centerlines_noseg.svg)
+
+Not the best - there's a lot of curves that are much too curvy. We could ignore these by filtering out high-curvature polygons/centerlines, but let's try out our fancy new curvature segmentation algorithm first. 
+

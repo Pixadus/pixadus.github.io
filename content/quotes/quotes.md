@@ -55,3 +55,21 @@ draft = false
 > To oppose something is to maintain it. [...] To oppose vulgarity is inevitably to be vulgar. You must go somewhere else; you must have another goal; then you walk a different road. 
 >
 >               - Estraven, the Left Hand of Darkness
+
+---
+
+> Esse quam videri.
+>
+>               - Cicero (?), On Friendship.
+
+---
+
+> So close, no matter how far
+> 
+> Couldn't be much more from the heart
+>
+> Forever trusting who we are
+>
+> And nothing else matters
+>
+>               - Nothing Else Matters, Metallica
