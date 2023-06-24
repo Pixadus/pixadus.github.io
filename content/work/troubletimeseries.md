@@ -245,3 +245,34 @@ Tracing out centerlines **without** our [curvature segmentation](/work/split-cur
 
 Not the best - there's a lot of curves that are much too curvy. We could ignore these by filtering out high-curvature polygons/centerlines, but let's try out our fancy new curvature segmentation algorithm first. 
 
+Let's try segmentation with our default parameters.
+
+![Segmentation comparison](/images/work/polygons_default.svg)
+
+Fantastic! Already we're seeing some marked difference in identified fibrils. If we loosen the parameters a bit to accomodate for smaller and tighter polygons, (`min_area=150, percent_thresh=0.2`), and then an upper limit by loosening the threshold a bit (`min_area=150, percent_thresh=0.3`),
+
+![Updated segmentations](/images/work/polygons_seg2.svg)
+
+The tighter version (`0.2`) has a lot more cohesivity of polygons than the looser version, particularly visible on the lower "C" curve toward the base of the image center. Let's try it out and trace out centerlines in all polygons of `area > 150`, using both the `get_centerlines` library and `np.polyfit(deg=2)`. 
+
+![get_centerlines and polyfit](/images/work/centerlines_seg.svg)
+
+Looking really good. `get_centerlines` conforms to the polygons a lot better, while polyfit generates much smoother lines - let's take another look at the OG image to see which we want. 
+
+![Sharpened base cropped](/images/work/base_sharp_cropped.png)
+
+![Centerlines overlaid on sharpened image](/images/work/centerlines_oversharp.svg)
+
+I think the `polyfit` method works better, to be honest - few of our features have visible high curvature, however the contrast isn't good enough to definitively say one way or the other. 
+
+---
+
+**Note**: This method ignores a lot of fibrils, in favor of "fibril regions". I believe we can either focus on bringing out every single fibril and having a ton of noise, or bringing out just a few "fibular groups" and having them be relatively well-defined over several images. 
+
+These centerlines therefore should be representative of the evolution of fibular groups rather than fibrils themselves. It's an unideal result - but the lack of consistent seeing and the fact that our fibrils operate right at the resolution limit of the imaging camera may make this an unavoidable dichotomy. 
+
+---
+
+**Note 2**: As a **todo**, let's try matching together fibrils that are just barely separated (such as around `x=50, y=200`) in the `polylines` centerlines. 
+
+---
