@@ -2,7 +2,7 @@
 title = "Day 44 - Magnetic Island"
 date = 2023-06-23
 description = "Not-actually-magnetic island, arriving in Cairns and plans."
-extra = {header_img = "https://wallpaperaccess.com/full/4019751.jpg"}
+extra = {header_img = "https://live.staticflickr.com/65535/52997008099_9c0b028c2b_k_d.jpg"}
 draft = false
 +++
 

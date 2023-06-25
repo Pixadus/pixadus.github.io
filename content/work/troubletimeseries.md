@@ -280,3 +280,5 @@ These centerlines therefore should be representative of the evolution of fibular
 Either later tonight or tomorrow I'll look at how these centerlines evolve over the full timeseries, and compare it with our OCCULT evolution. Pending further optimization of our curvature segmentation parameters depending on the results of the timeseries evolution, it's almost July and I'll need to call this good in favor of working on the paper + getting results. 
 
 This work should be considered, for now, the best I've been able to do with the current resolution limit. Once updated data with a higher resolution limit from DKIST becomes available, I'd like to revisit this. 
+
+(Note for meeting with K&G - talk about appreciation)
