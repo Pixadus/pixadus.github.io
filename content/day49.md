@@ -3,7 +3,7 @@ title = "Day 49 - Hastening South"
 date = 2023-06-28
 description = "Camping preparations ⛺"
 extra = {header_img = "https://wallpaperaccess.com/full/4019751.jpg"}
-draft = true
+draft = false
 +++
 
 ## Cairns
@@ -27,7 +27,7 @@ I bought sandals (finally)!
 I'm really, really excited about these. I know, they're shoes, not usually worth excitement, but - let me explain. My all-time favorite shoe ever was the [Keen Targhee III](https://keenfootwear.com.au/collections/targhee-iii/products/targhee-iii-wp-wide-mens-bungee-cord-black) - a waterproof, good-looking leatherbound shoe that was just so, freaking, cozy, and had [Never Let Me Down](https://www.youtube.com/watch?v=snILjFUkk_A) traction, like, everywhere. 
 
 <div class="gallery">
-    <a href="https://gripped.com/wp-content/uploads/2018/03/Keen-Targhee-III-Mid-1024x683.jpg" data-ngthumb="https://gripped.com/wp-content/uploads/2018/03/Keen-Targhee-III-Mid-1024x683.jpg"></a>
+    <a href="https://u7q2x7c9.stackpathcdn.com/photos/17/94/300915_29879_XXL.webp" data-ngthumb="https://u7q2x7c9.stackpathcdn.com/photos/17/94/300915_29879_XXL.webp"></a>
 </div>
 
 I took those suckers up mountains, over ice sheets, forgot I was wearing them in the house (to the annoyance of roommates), into volcanoes and throughout Europe and they were fantastic. 
@@ -52,6 +52,23 @@ I'm not bitter - mostly - but am happy to have my own room for a night to rechar
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/53004776448_6414a81b71_o_d.gif" data-ngthumb="https://live.staticflickr.com/65535/53004776448_6414a81b71_o_d.gif"></a>
+</div>
+
+## Map Distortion
+
+A quick aside - go [read this article on map distortion](https://unchartedterritories.tomaspueyo.com/p/maps-distort-how-we-see-the-world). 
+
+Some fantastically bizarre visualizations there - though more accurate in a sense. You'd think countries closer to the equator are favorably biased but that is **wrong**! 
+
+<div class="gallery">
+    <a href="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F21af693b-bd85-47b8-a49b-b2088c21888a_1522x1276.png" data-ngthumb="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F21af693b-bd85-47b8-a49b-b2088c21888a_1522x1276.png"></a>
+    <a href="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf1ddc2b-5d3a-4124-9539-d5350b45a1c9_1000x666.png" data-ngthumb="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf1ddc2b-5d3a-4124-9539-d5350b45a1c9_1000x666.png"></a>
+</div>
+
+And of particular abject fascination,
+
+<div class="gallery">
+    <a href="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89f38ff1-fda5-4875-ab17-dc6310fd904b_1600x1131.png" data-ngthumb="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89f38ff1-fda5-4875-ab17-dc6310fd904b_1600x1131.png"></a>
 </div>
 
 ## Camping Prep
@@ -119,7 +136,21 @@ Okay, gear update. I ended up just going with a large stainless steel bowl - it 
 - [ ] Headlamp
 - [ ] Charged gear + valuables
 
-I'm choosing to not take a first-aid kit with me, as well as a radio - the short term nature of my stay doesn't really justify the cost, though my inner backpacker is telling me what a bad idea this is. Looking at the danger points - the island is isolated and has few dangers on it. The big ones will be on the sea - and, though it sounds fatalistic, most dangers there can't be easily addressed by a FA kit. So - I'm choosing to sacrifice safety in favor of frugality, as I still have a month to go. 
+I'm choosing to not take a first-aid kit with me, as well as a radio - the short term nature of my stay doesn't really justify the cost, though my inner backpacker is telling me what a bad idea this is. 
+
+The College Life™, sacrificing safety in favor of frugality since 2001. 
+
+---
+
+**The Plan**:
+
+For reference, I am departing from 1770 with [1770 Reef](https://www.1770reef.com.au/) tomorrow, June 29th at 5:30 AM AEST. 
+
+I'm expecting, barring unforseen circumstance, to return by **July 1** at **5:00 PM AEST**. 
+
+If you do not hear from me by **July 2nd**, **8:00 PM AEST**, then try giving 1770 Reef a call and see what's up. 
+
+---
 
 ## Now-Truths
 
@@ -127,11 +158,9 @@ I'm choosing to not take a first-aid kit with me, as well as a radio - the short
 
 I've spent a lot of time getting frustrated over the differences between some imagined "ideal self" and who I am now. I've been wondering about how to resolve this - how do we balance the ambition for a better life with being content to live in the present? 
 
-Much of Aristotle's writings in Nicomachean Ethics are focused on **decision-making**. During my initial reading a bit ago, I was still operating under the basis that choosing and pursuing some "ideal self" was the way to go - and I now believe this basis of thought doesn't agree with the basis of virtue ethics. Rather, it seems virtue ethics are concerned with the present moment and the decisions that need to be made **now**. 
+Much of Aristotle's writings in Nicomachean Ethics are focused on **decision-making**. During my initial reading a bit ago, I was still operating under the basis that choosing and pursuing some "ideal self" was the way to go - and I now believe this basis of thought doesn't agree with the basis of virtue ethics. Rather, it seems virtue ethics are concerned with the present moment and the decisions that need to be made in the here and now. 
 
 So, **pursue the best course of action** right now allows for. This feels to agree much better with living a more confident life (less self criticism for failing to adhere to some godlike ideal self) and with virtue ethics.
-
-This feels important. 
 
 ---
 
@@ -139,7 +168,7 @@ This feels important.
 
 Do you ever spend time doing something, realize "oh damnit I've been incredibly inefficient about this", and then think "if I was just slightly more intelligent / logical / rational" I would have thought of this before?
 
-I do. I did this morning. Yesterday. Will again soon. When this happens I need to try to remember it's a **fallacy**! "If I were only" is **wishful thinking** and does NOTHING for you now. 
+I do. I did this morning. Yesterday. Will again soon. When this happens I need to try to remember it's a fallacy! "If I were only" is **wishful thinking** and does nothing for you now. 
 
 ---
 
