@@ -68,12 +68,4 @@ Conversations that feel awkward, interactions with friends and family that fall 
 
 Interactions like this one. Was I tired? Sure - I'd woken up a few minutes before. Did I expect better of myself? Quite. I'd wanted to slide in, order a coffee, and not remember a single thing standing out. Instead, I have this - learning experience - of a conversation to recall here. 
 
-Popular wisdom says "don't worry about it, it's okay, happens to all of us" and it is true. It does happen to all of us. But, socially, I'm generally quite firmly on the *anxious* part of the above dichotomy - so interactions like these suck to have. 
-
-So, let's work out what makes for a good conversation (just one of the many, many elements of socializing, but probably one of the most important).
-
-## Good Conversations
-
-What makes a **good** conversation? What elements lead to two people walking away from a conversation content and excited, thinking "that was really satisfying" or even just a feeling of *I got what I was looking for out of that*?
-
-Let's start by defining a conversation, as **a verbal exchange of information**. Conversations are mediums through which we convey information. This is a very broad definition of course - so let's give it some nuance. 
+I'm quite aware that this is normal - and fine. But, broadly speaking I've spent a lot of time on the anxious part of the above spectrum - it's easy to fall back into. 

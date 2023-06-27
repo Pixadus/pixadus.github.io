@@ -281,4 +281,33 @@ Either later tonight or tomorrow I'll look at how these centerlines evolve over 
 
 This work should be considered, for now, the best I've been able to do with the current resolution limit. Once updated data with a higher resolution limit from DKIST becomes available, I'd like to revisit this. 
 
-(Note for meeting with K&G - talk about appreciation)
+---
+
+With the original slice, the execution time of our demo script is:
+
+```
+Executed in    7.11 secs    fish           external
+   usr time   10.18 secs  568.00 micros   10.18 secs
+```
+
+With the full image, this becomes 
+
+```
+Executed in   78.39 secs    fish           external
+   usr time   32.99 secs  299.00 micros   32.99 secs
+```
+
+![Centerlines on full image](/images/work/centerlines_fullimg.svg)
+
+Runtime triples, but is with the full curvature segmentation in place. For the full 120 image sequence assuming similar quantity of fibrils on average, the runtime will be about 3840 seconds (just over an hour). 
+
+![Polyfit gif](/images/work/polyfit.gif)
+![OCCULT-2 over timeseries (slow)](/images/work/occult-slow.gif)
+
+**Above**: Polyfit, **Below**: OCCULT-2.
+
+Fibrils don't disappear as much as in the OCCULT-2 version - but they do get disconnected and disjointed when seeing is bad. To help reduce noise, let's first add another minimum area filter (don't calculate polylines for less than 300 pixels area) and only run the script for a period of good seeing (62-87).
+
+![Polyfit goodseing gif](/images/work/polyfit_goodseeing.gif)
+
+Similar results. While this isn't what was hoped for - it is an alternate method to OCCULT-2 that we can use. Let's characterize them and continue. 
