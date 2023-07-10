@@ -135,7 +135,7 @@ On a more sober note, an issue that currently affects most reefs around the worl
 
 Bleaching doesn't mean the coral are **dead**, per se - just without a source of nutrients. As water temperatures decrease, *zooxanthellae* are allowed to move back in to the coral - so it's not an instant-death scenario. 
 
-That said, coral bleaching *is* a primary cause of coral death due to starvation - and, if climate change continues unabated, we might be seeing extensive widespread deaths of entire coral ecosystems within the next few years (in 2005, for instance, approximately **half** of the [reefs in the Caribbean died](https://oceanservice.noaa.gov/facts/coral_bleach.html) due to a large coral bleaching event).
+That said, coral bleaching *is* a primary cause of coral death due to starvation - and, if climate change continues unabated, we might be seeing extensive widespread deaths of entire coral ecosystems within the next few years (in 2005, for instance, approximately **half** of the [reefs in the Caribbean died](https://oceanservice.noaa.gov/facts/coral_bleach.html) due to a large coral bleaching event, and ).
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/53026546904_a59a4da0a6_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/53026546904_24c8cf320b_c_d.jpg"></a>
@@ -182,7 +182,7 @@ Both *L. laevigata* and *N. novaecaledoniae* have [curious feeding habits](https
     <a href="https://live.staticflickr.com/65535/53033504308_f219bbedc1_o_d.gif" data-ngthumb="https://live.staticflickr.com/65535/53033504308_f219bbedc1_o_d.gif"></a>
 </div>
 
-Here's a little close-up of the little feet they use to move. 
+Here's a close-up of the little feet they use to move. 
 
 <div class="gallery">
     <a href="https://live.staticflickr.com/65535/53033020661_8e1fa44766_o_d.gif" data-ngthumb="https://live.staticflickr.com/65535/53033020661_8e1fa44766_o_d.gif"></a>
