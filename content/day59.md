@@ -25,6 +25,8 @@ First, the island itself. Lady Musgrave Island is a coral cay - a small sandy is
     <a href="https://live.staticflickr.com/65535/53030698556_4ea3ac13f0_o_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/53030698556_7074fa97be_c_d.jpg"></a>
 </div>
 
+<iframe width=100% height="450" src="https://www.youtube.com/embed/3boMGECGYM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin-top: -0.8em;"></iframe>
+
 [One current theory](https://www.geographynotes.com/oceans/4-main-theories-of-coral-reefs-and-atolls-oceans-geography/2704) says that the Great Barrier Reef formed around what were once hills on the Australian continental plain. As the last ice age drew to a conclusion around 11,700 years ago, sea levels rose approximately 60 meters as the glaciers melted. 
 
 Coral reefs started to form around hills on the Australian plains, which became islands as the rising water covered the plains. Gradually, the islands started to erode over time, until nothing remained above the surface - but the reef remained, and flourished. This provided a natural barrier to ocean swells, and over time as all manner of sea creatures lived and expired, the island formed out of the shells, coral, bone and ocean sediment (such as sand) that remained. 
