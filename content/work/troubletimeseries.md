@@ -304,8 +304,6 @@ Runtime triples, but is with the full curvature segmentation in place. For the f
 ![Polyfit gif](/images/work/polyfit.gif)
 ![OCCULT-2 over timeseries (slow)](/images/work/occult-slow.gif)
 
-**Above**: Polyfit, **Below**: OCCULT-2.
-
 Fibrils don't disappear as much as in the OCCULT-2 version - but they do get disconnected and disjointed when seeing is bad. To help reduce noise, let's first add another minimum area filter (don't calculate polylines for less than 300 pixels area) and only run the script for a period of good seeing (62-87).
 
 ![Polyfit goodseing gif](/images/work/polyfit_goodseeing.gif)
