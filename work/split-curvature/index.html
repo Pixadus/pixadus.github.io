@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Curvature-based segmentation</title>
+  <meta name="description" content="Splitting up polygons based on curvature.">
+  
+  
+  <link rel="icon" type="image/x-icon" href="&#x2F;images&#x2F;favicon.ico">
+  
+
+  <link rel="stylesheet" href="https://www.andromeda.is/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.andromeda.is">Andromeda</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="https:&#x2F;&#x2F;external-content.duckduckgo.com&#x2F;iu&#x2F;?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2F153966444a731fabeef805f08abf3de6%2Ftenor.gif%3Fitemid%3D15755119&amp;f=1&amp;nofb=1&amp;ipt=6f267753d0ece331a54896fe0d69868375ea213cd6bbb6c8834ec5960979ba8e&amp;ipo=images" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Curvature-based segmentation</h1>
+                <span class="page-description">Splitting up polygons based on curvature.</span>
+                <span class="page-date">2023&#x2F;06&#x2F;12</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <h2 id="the-problem">The Problem</h2>
+<p>Traced-out fibrils are connected to one another, rather than being individual entities. </p>
+<h2 id="ideal-result">Ideal Result</h2>
+<p>Fibrils are long and have relatively small curvature values throughout the entire length of the fibril. </p>
+<h2 id="the-process">The Process</h2>
+<p>First, we present a selected set of combined fibrils that demonstrate this problem - </p>
+<p><img src="/images/work/shape/initshape.png" alt="The Shape" /></p>
+<p>Let's try to visualize the curvature at every point. <a href="https://en.wikipedia.org/wiki/Curvature#Graph_of_a_function">Curvature</a> can be defined for a parameterized curve as</p>
+<p>$$
+k = \frac{|x'y''-y'x''|}{\left(x'^2-y'^2\right)^{3/2}}
+$$</p>
+<p>For our parameterization, we have points separated by $t=0.5$, and $f(t) = (x(t),y(t))$. After working this calculation out in code, we get</p>
+<p><img src="/images/work/shape/curv_est_1.svg" alt="Curvature estimation 1" /></p>
+<p>It looks like it worked great! However, there are some points where the &quot;rough terrain&quot; along our curve increase local curvature where it shouldn't be. Let's smooth our data out by using a <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.savgol_filter.html">Savitzky-Golay filter</a> (with <code>win_size=20</code> &amp; <code>deg=3</code> polynomial).</p>
+<p><img src="/images/work/shape/curv_est_2.svg" alt="Cuvature estimation 2" /></p>
+<p>Let's isolate these curvature extrema.</p>
+<p><img src="/images/work/shape/curv_extrema.svg" alt="Curvature extrema" /></p>
+<p>At this point, it'd be prudent to visualize what we'd ideally &amp; realistically like this to turn into following curvature estimation. </p>
+<p><img src="/images/work/shape/ideal_curv_extrema.svg" alt="Ideal" /></p>
+<p>I say &quot;ideal&quot; - though it isn't, as we see some fibrils cut off early. However, it's important to keep in mind <em>how</em> we go about this process. My thoughts are,</p>
+<ol>
+<li>High-curvature areas should only match with curves across a <strong>closed</strong> shape (the line drawn between must lie inside the polygon, rather than outside). </li>
+<li>The closest ID'd matching curve must have some <strong>minimum arc-length distance</strong> away from the initial curve, to avoid matching along the initial curve or those beside it. </li>
+<li>When a shape is matched, get rid of nearby on-line identified curves to prevent <strong>oversegmentation</strong>. </li>
+</ol>
+<p><strong>Note</strong>: Notice the blue lines as well - these are unideal consequences of this method. Need to consider how to deal with these. Also, need to add a &quot;minimum area&quot; filter - maybe &quot;if below mean area, don't do curvature segmentation?&quot;</p>
+<hr />
+<p>After applying the three criterion, we get this:</p>
+<p><img src="/images/work/shape/cc1.svg" alt="Cutting curvature part 1" /></p>
+<p>As you can see, it needs some work. </p>
+<p><strong>First thing</strong>: I'm checking for the midpoint between points to see if it lies within the shape. This isn't quite enough - so let's interpolate along the line between curvatures, say, 10 times, and check to see if all of those points lie within instead.</p>
+<p><img src="/images/work/shape/cc2.svg" alt="Cutting curvature part 2" /></p>
+<p>Much better. <strong>Second thing</strong>, we have connections reaching all the way across the shape. Let's add a <code>max_spatial_distance=20</code> parameter. </p>
+<p><img src="/images/work/shape/cc3.svg" alt="Cutting curvature part 3" /></p>
+<p>Next, let's add some support for our shape in the middle. </p>
+<p><img src="/images/work/shape/cc4.svg" alt="Cutting curvature part 4" /></p>
+<hr />
+<p>Okay - finally, let's make sure our subdivided polygons aren't too small. We'll take a look at every connection and subdivide the Polygon based on that, using Shapely's <a href="https://shapely.readthedocs.io/en/stable/manual.html#shapely.ops.split">split</a> function, then check the area of each with a flat minimum area of <code>min_area=300</code> pixels for now. </p>
+<p><img src="/images/work/shape/cc5.svg" alt="Cutting curvature part 5" /></p>
+<p>Taking a look at the segmentation, </p>
+<p><img src="/images/work/shape/cc6.svg" alt="Cutting curvature part 6" /></p>
+<p>It looks like the segmentation isn't working properly on interior shapes. Taking a look at the documentation for the <code>split</code> function, we see:</p>
+<blockquote>
+<p>If the splitter does not split the geometry, a collection with a single geometry equal to the input geometry is returned.</p>
+</blockquote>
+<p>Since we're splitting then moving on to the next line, then we're just returning the original shape for both of the lines connecting to the hole.</p>
+<hr />
+<p>Doing some work to get the script to recognize our two segments, I first tried to use a <a href="https://shapely.readthedocs.io/en/stable/reference/shapely.convex_hull.html">convex hull</a> between the two lines, then find the intersection between the hull and the shape itself. </p>
+<p><img src="/images/work/shape/cc7.svg" alt="Cutting curvature part 7" /></p>
+<p>It recognized our shape! Yay! Except ... it looks weird. The convex hull intersection may not really be what we're looking for. Since we have the individual coordinate points of the shapes themselves, let's just construct a shape composed of the two lines and the segments connecting the four verticies. More complicated in setup, but simplier in design. </p>
+<p>After wrangling with list comprehension for some time, </p>
+<p><img src="/images/work/shape/cc8.svg" alt="Cutting curvature part 8" /></p>
+<p><strong>Boom</strong>. An untested, generalized approach to curvature-based segmentation of polygons! Let's implement this in a class, then return to our timeseries segmentation. We'll likely have to refine our model some in practice, but the broad strokes are there to be worked with. </p>
+
+        </div>
+        
+        
+
+        
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Parker Lamb</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:parker@plamb.com">parker@plamb.com</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Center normal images
+  $("p").each( function(index, element) {
+    const items = $(this)[0].children;
+    if (items.length > 0 && items[0].tagName == 'IMG') {
+      $(this).css("text-align", "center");
+    }
+  } )
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+      })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<!-- Math rendering -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'] ]}});
+</script>
+
+
+    </body>
+
+</html>
