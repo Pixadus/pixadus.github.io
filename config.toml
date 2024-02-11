@@ -1,14 +1,15 @@
 # Site title
 title = "Andromeda"
-base_url = "https://blog.andromeda.is"
-description = "Motorcycles, philosophy and a journey up the Australian east coast."
+base_url = "https://www.andromeda.is"
+description = "My site with all the things."
 compile_sass = true
 theme = "andromeda"
 
 [extra]
 header_links = [
     {name = "Quotes", url = "/quotes"},
-    {name = "Work", url = "/work"}
+    {name = "Work", url = "/work"},
+    {name = "Blog", url = "/blog"}
 ]
 license = "CC BY-NC 2.0"
 favicon = "/images/favicon.ico"

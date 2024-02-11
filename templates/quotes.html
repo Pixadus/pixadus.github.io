@@ -7,7 +7,7 @@
 
     <body>
         <div id="index-header">
-            <canvas id="galaxy"></canvas>
+            <canvas id="stars"></canvas>
             <h1 class="andromeda-header-text">
                 <a href="{{ config.base_url }}">{{ config.title }}</a>
             </h1>
@@ -26,6 +26,6 @@
             {% endfor %}
             {% endblock content %}
         </div>
-        {{ macros::indexfooter() }}
+        {{ macros::footer() }}
     </body>
 </html>
