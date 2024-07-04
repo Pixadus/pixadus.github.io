@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotfiles.md",
+                "file": "mini/troubleshooting.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dotfiles.md",
+                "file": "mini/troubleshooting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dotfiles.md",
+                "file": "mini/troubleshooting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dotfiles.md"
+                "file": "mini/troubleshooting.md"
               }
             }
           }
@@ -161,8 +161,9 @@
   },
   "active": "1294b456b31932e0",
   "lastOpenFiles": [
-    "_functions.md.md",
+    "mini/images/gaskets.png",
     "dotfiles.md",
+    "_functions.md.md",
     "SUMMARY.md",
     "MRO Paper Thing.md",
     "mini/troubleshooting.md",

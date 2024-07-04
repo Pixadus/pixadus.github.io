@@ -80,8 +80,6 @@ Compression is very low on cylinder 1. Following the Haynes manual, I added abou
 > 
 > If two adjacent cylinders have equally low compression, strong possibility the head gasket between them is blown - coolant in combustion chambers or crankcase would verify this.
 
-Fortunately for my wallet, the compression didn't go up - so likely not a piston issue. Unfortunately, that means I still need to isolate it to either the valves or head gasket. I'm inclined to believe it may be the valves - were it the head gasket I might smell coolant in the exhaust and cylinder 2 could see a lower compression. Damaged valves, on the other hand would explain both *a.* the strong leakage and *b.* the presence of a semi-large carbon deposit at the base of cylinder 1. 
+Fortunately for my wallet, the compression didn't go up - so likely not a piston issue. *Un*fortunately, that means I still need to isolate it to either the valves or head gasket. I'm inclined to believe it may be the inlet / exhaust valves - were it the head gasket I might smell coolant in the exhaust, and the thinnest (and most likely) breakage spot would be between cylinder 1 and cylinder 2 ... i.e. we'd expect to see a low compression in cylinder 2 with a head gasket issue. 
 
-Either way, I need more information, so I picked up a copy of BMW's ISTA+ troubleshooting software, which has some more in-detail repair information of BMW engines (such as the 2012 Mini). 
-
-## 
+![](images/gaskets.png)
