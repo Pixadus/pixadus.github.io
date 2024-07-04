@@ -363,9 +363,8 @@ Test cylinder 2 to provide a comparison.
 <p><strong>Ref. Haynes:</strong> If the compression increases after the oil is added, the piston rings are likely worn. If it doesn't increase significantly, the leakage is occurring at the valves or head gasket. Leakage past the valves might be caused by burned valve seats and/or faces or warped, cracked or bent valves.</p>
 <p>If two adjacent cylinders have equally low compression, strong possibility the head gasket between them is blown - coolant in combustion chambers or crankcase would verify this.</p>
 </blockquote>
-<p>Fortunately for my wallet, the compression didn't go up - so likely not a piston issue. Unfortunately, that means I still need to isolate it to either the valves or head gasket. I'm inclined to believe it may be the valves - were it the head gasket I might smell coolant in the exhaust and cylinder 2 could see a lower compression. Damaged valves, on the other hand would explain both <em>a.</em> the strong leakage and <em>b.</em> the presence of a semi-large carbon deposit at the base of cylinder 1.</p>
-<p>Either way, I need more information, so I picked up a copy of BMW's ISTA+ troubleshooting software, which has some more in-detail repair information of BMW engines (such as the 2012 Mini).</p>
-<h2 id=""><a class="header" href="#"></a></h2>
+<p>Fortunately for my wallet, the compression didn't go up - so likely not a piston issue. <em>Un</em>fortunately, that means I still need to isolate it to either the valves or head gasket. I'm inclined to believe it may be the inlet / exhaust valves - were it the head gasket I might smell coolant in the exhaust, and the thinnest (and most likely) breakage spot would be between cylinder 1 and cylinder 2 ... i.e. we'd expect to see a low compression in cylinder 2 with a head gasket issue.</p>
+<p><img src="mini/images/gaskets.png" alt="" /></p>
 
                     </main>
 
@@ -384,22 +383,6 @@ Test cylinder 2 to provide a comparison.
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
