@@ -30,7 +30,7 @@ First step: getting rid of what's already present.
 
 [Concrobium](https://www.homedepot.com/p/Concrobium-32-oz-Mold-Control-025326/100654126), bleach and vinegar all work against heavy concentrations of mold - but they're much better for small-yet-intense areas, like under my water heater. I wanted to make sure most of the mold on my entire boat was gone, so I used concrobium for areas of visible mold, then used an ozone generator.
 
-Ozone has been [scientifically tested](- [https://doi.org/10.1080/01919510903043996](https://doi.org/10.1080/01919510903043996)) against a wide variety of molds, and found to be effective at killing it (including black mold!)- but only at high concentrations. Specifically, an ozone concentration of 35 ppm. Let's do some math to find out how to practically generate that much. 
+Ozone has been [scientifically tested](https://doi.org/10.1080/01919510903043996](https://doi.org/10.1080/01919510903043996) against a wide variety of molds, and found to be effective at killing it (including black mold!)- but only at high concentrations. Specifically, an ozone concentration of 35 ppm. Let's do some math to find out how to practically generate that much. 
 
 Andromeda has an LoA of 37 feet, a beam of 9.75 feet and interior height of maybe 5 feet. 
 
