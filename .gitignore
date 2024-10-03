@@ -6,3 +6,6 @@ ignore/
 
 # Ignore images symlink in work dir
 content/work/images/
+
+# Ignore ship build directory - deploy action should take care of it
+static/ship/

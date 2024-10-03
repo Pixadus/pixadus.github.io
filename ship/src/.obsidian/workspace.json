@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "entries/sail-cleaning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "173c94951ef4460d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "entries/mold.md",
+                "file": "entries/head.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "entries/mold.md",
+                "file": "entries/head.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "entries/mold.md",
+                "file": "entries/head.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "entries/mold.md"
+                "file": "entries/head.md"
               }
             }
           }
@@ -160,42 +147,46 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "173c94951ef4460d",
+  "active": "93bacd8f83ed7403",
   "lastOpenFiles": [
-    "SUMMARY.md",
-    "entries/sail-cleaning.md",
+    "entries/images/baby.png",
+    "entries/head.md",
+    "entries/images/baby.jpeg",
+    "entries/images/seal.gif",
+    "entries/images/head-out.png",
+    "entries/images/head.png",
+    "entries/images/head",
     "entries/mold.md",
+    "SUMMARY.md",
+    "entires/head.md",
+    "entires",
+    "welcome.md",
+    "Finances.md",
+    "Intro.md",
+    "entries/sail-cleaning.md",
+    "intro.md.md",
+    "Untitled",
     "entries/images/mold-cabinet.jpg",
-    "Untitled.md",
     "entries/images/measurements.png",
     "entries/images/current-rh.png",
     "entries/images/mold-rh.png",
     "entries/images/Pasted image 20240924093410.png",
     "entries/images/mold-mildew.png.crswap",
-    "entries/images/mold-mildew.png",
     "entries/images/mold-mildew.crswap",
     "entries/images/mold-mildew",
-    "welcome.md",
-    "entries/images/mildewed-sails.png",
     "entries/images",
     "entries/sail-cleaning 1.md",
     "entries",
     "sail-cdea",
     "day-one.md",
     "images/sailboat-cropped.png.crswap",
-    "images/sailboat-cropped.png",
-    "images/sailboat-cropped.jpg",
     "dotfiles.md",
-    "images/vector-boat.png",
-    "images",
     "_functions.md",
     "mini/troubleshooting.md",
     "_functions.md.md",
     "MRO Paper Thing.md",
     "tools.md",
-    "datasheets/Hale_Brandt_Astronomy_Methods.pdf",
     "datasheets/Hale.md",
-    "datasheets",
     "mini/images/troubleshooting 2024-06-27 15.43.39.excalidraw.md",
     "Excalidraw/Drawing 2024-06-27 15.40.18.excalidraw.md",
     "Excalidraw/Drawing 2024-06-27 15.40.01.excalidraw.md",

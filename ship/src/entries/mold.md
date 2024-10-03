@@ -1,8 +1,10 @@
-# Mold & Mildew
+# 9/24/24 - Mold
 
-Mold and mildew have been on my mind lately.
+> “...to the last I grapple with thee; from hell's heart I stab at thee; for hate's sake I spit my last breath at thee.”
+>
+> **Herman Melville, "Moby Dick"**
 
-When I first bought Andromeda a few months ago, the previous owner mentioned she'd been sitting in her berth for a year without interacting with her much. I, being inexperienced, didn't think much of it at the time. Unfortunately, a year in a berth in the PNW with no ventilation means something that's a bogeyman to most sailors: *mold*. 
+When I first bought Andromeda a few months ago, the previous owner mentioned she'd been sitting in her berth for a year without interacting with her much. I,  being *utterly* inexperienced, didn't think much of it at the time. Unfortunately, it turns out that a year in a berth in the PNW with no ventilation means something that's a bogeyman to most sailors: *mold*. 
 
 ![](images/mold-mildew.png)
 
@@ -14,15 +16,13 @@ After seeing some for the first time, I ran around the ship in a panic looking f
 
 > Apparently, one way that fungi can distinguished from other eukaryotic organisms (like bacteria, plants and animals) by the presence of *chitin* in their cell walls. 
 
-Mold tends to occur inside (damp, dark and still areas). It's 
-
  According to [this study](https://www.eurogypsum.org/wp-content/uploads/2015/05/N203.pdf), mold needs three things to grow:
 
 1. **Wet**: relative humidity above 60%.
 2. **Low light levels**: intense UV can kill mold, so it's difficult to grow outside unless it's got an easy food source. Even on nutritionally sparse interiors, varieties can grow if uninhibited by UV. 
 3. **Still air**: for the spores to take root and grow.
 
-Removal of any of these three means we make a hostile environment for mold.
+Removal of any of these three means we make a hostile environment for mold. Right.
 
 ## Fungicide
 
@@ -30,7 +30,7 @@ First step: getting rid of what's already present.
 
 [Concrobium](https://www.homedepot.com/p/Concrobium-32-oz-Mold-Control-025326/100654126), bleach and vinegar all work against heavy concentrations of mold - but they're much better for small-yet-intense areas, like under my water heater. I wanted to make sure most of the mold on my entire boat was gone, so I used concrobium for areas of visible mold, then used an ozone generator.
 
-Ozone has been [scientifically tested](https://doi.org/10.1080/01919510903043996](https://doi.org/10.1080/01919510903043996) against a wide variety of molds, and found to be effective at killing it (including black mold!)- but only at high concentrations. Specifically, an ozone concentration of 35 ppm. Let's do some math to find out how to practically generate that much. 
+Ozone has been [scientifically tested](https://doi.org/10.1080/01919510903043996) against a wide variety of molds, and found to be effective at killing it (including black mold!) - but only at high concentrations. Specifically, an ozone concentration of 35 ppm. Let's do some math to find out how to practically generate that much. 
 
 Andromeda has an LoA of 37 feet, a beam of 9.75 feet and interior height of maybe 5 feet. 
 
@@ -58,8 +58,9 @@ First - I got a dehumidifer to keep the interior air at 45% humidity until I can
 > - 1/4 cup borax
 > - 2 tablespoons of TSP
 > - 2 tablespoons of washing soda 
-> Mix in a bucket then spray with a spray-bottle. Scrub in with a wire brush and let sit for a bit, then remove any residue with a shop-vac. 
+> 
+> Mix in a bucket then spray with a spray-bottle. Scrub in with a brush and let sit for a bit, then remove any residue with a shop-vac. 
 
-The key here is the borax - it's toxic to mold but not to humans. Trace amounts of it will remain on the surface it was sprayed on, and can be used on pretty much every surface (though maybe not on beds), so mold shouldn't grow on that surface for a long while, even given ideal conditions. 
+The key here is the borax - it's toxic to mold but not to humans. Trace amounts of it will remain on the surface it was sprayed on, and can be used on pretty much every surface (though maybe not on beds), so mold shouldn't grow on that surface for a long while, even given ideal conditions. I sprayed this on most carpeted and hardwood surfaces, especially where mold had grown previously, then rubbed it in with a brush, removing the excess with a little shop-vac I had on hand. 
 
 Over the next few days I'll get ventilation set up and start attacking the ancient (and stinky) bathroom. 
