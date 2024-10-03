@@ -2,16 +2,35 @@
 on: push
 name: Build and deploy GH Pages
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
       - name: checkout
+        uses: actions/checkout@v3.0.0
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@v0.17.2
+        env:
+          # Target branch
+          PAGES_BRANCH: gh-pages
+          # Provide personal access token
+          TOKEN: ${{ secrets.TOKEN }}
+          # Or if publishing to the same repo, use the automatic token
+          #TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # To push a branch 
+      pages: write  # To push to a GitHub Pages site
+      id-token: write # To update the deployment status
+    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Install latest rust toolchain
-      - uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           default: true
@@ -20,21 +39,32 @@ jobs:
         run: |
           cargo install mdbook
           cargo install mdbook-katex
+      # TODO when more time, configure below to decrease configuration time. 
+      # - name: Install latest mdbook
+      #   run: |
+      #     tag=$(curl 'https://api.github.com/repos/rust-lang/mdbook/releases/latest' | jq -r '.tag_name')
+      #     url="https://github.com/rust-lang/mdbook/releases/download/${tag}/mdbook-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+      #     mkdir mdbook
+      #     curl -sSL $url | tar -xz --directory=./mdbook
+      #     echo `pwd`/mdbook >> $GITHUB_PATH
+      # - name: Install mdbook-katex
+      #   run: |
+      #     url="https://github.com/lzanini/mdbook-katex/releases/download/0.9.0-binaries/mdbook-katex-v0.9.0-x86_64-unknown-linux-gnu.tar.gz"
+      #     mkdir mdbook-katex
+      #     curl -sSL $url | tar -xz --directory=./mdbook-katex
+      #     echo `pwd`/mdbook-katex >> $GITHUB_PATH
       - name: Build Book
-        run: | 
+        run: |
           # This assumes your book is in the root of your repository.
           # Just add a `cd` here if you need to change to another directory.
-          cd ship/
           mdbook build
-
-      - name: build_and_deploy
-        uses: shalzz/zola-deploy-action@v0.17.2
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          fetch-depth: 0
-        env:
-          # Target branch
-          PAGES_BRANCH: gh-pages
-          # Provide personal access token
-          TOKEN: ${{ secrets.TOKEN }}
-          # Or if publishing to the same repo, use the automatic token
-          #TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Upload entire repository
+          path: 'book'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
