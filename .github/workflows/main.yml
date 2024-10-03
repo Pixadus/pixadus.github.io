@@ -2,7 +2,7 @@
 on: push
 name: Build and deploy GH Pages
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
@@ -11,7 +11,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install latest rust toolchain
-        uses: actions-rs/toolchain@v1
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           default: true
@@ -26,6 +26,7 @@ jobs:
           # Just add a `cd` here if you need to change to another directory.
           cd ship/
           mdbook build
+
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.17.2
         with:
