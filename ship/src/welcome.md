@@ -19,6 +19,7 @@ Andromeda is a 37' sloop designed by Bill Buchan Sr. and John Buchan in the 1960
 
 Everything that needs doing as of 10/3/2024. 
 
+
 **Interior**
 - [x] Clean the interior of of mold [[9/24/24 - Mold](entries/mold.md)]
 - [x] Remove the old head and 6.5 gal holding tank [[9/28/24 - Removing the Head](entries/head.md)]
