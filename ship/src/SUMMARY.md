@@ -1,6 +1,6 @@
 # Summary
 
-[Welcome](Welcome.md)
+[Welcome](welcome.md)
 
 # Ship's Log
 
