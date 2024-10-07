@@ -3,7 +3,7 @@ authors = ["Parker Lamb"]
 language = "en"
 multilingual = false
 src = "src"
-title = "S.V. Andromeda"
+title = "S.V. Endurance"
 
 [build]
 build-dir = "../static/ship"

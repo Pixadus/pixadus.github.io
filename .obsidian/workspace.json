@@ -1,0 +1,170 @@
+{
+  "main": {
+    "id": "a7bef9174397d252",
+    "type": "split",
+    "children": [
+      {
+        "id": "a3e7b4b07b43dda7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4670d77408a414a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ship/src/entries/refrigerator.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "052dea0b2069176d",
+    "type": "split",
+    "children": [
+      {
+        "id": "be9d26cc186953f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0a1b7b2982ba0b85",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ca08b3ea5d5a81c2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "06bce72ca5658e79",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2f5c282aabce189b",
+    "type": "split",
+    "children": [
+      {
+        "id": "26a2f5b5f5f12736",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "438390be8796afeb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ship/src/entries/refrigerator.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0dda0876c2a3c25d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ship/src/entries/refrigerator.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a6cbccea5035ef43",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "27c6a6f4500310d7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ship/src/entries/refrigerator.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4670d77408a414a4",
+  "lastOpenFiles": [
+    "ship/src/entries/mold.md",
+    "ship/src/welcome.md",
+    "ship/src/SUMMARY.md",
+    "ship/src/entries/head.md",
+    "ship/src/entries/refrigerator.md",
+    "static/ship/images/sailboat-cropped.png",
+    "static/ship/images",
+    "static/ship/entries/images/head-out.png",
+    "static/ship/entries/images/baby.jpeg",
+    "static/ship/entries/images/head.png",
+    "static/ship/entries/images/refrigerator-guide",
+    "static/ship/entries/images/measurements.png",
+    "static/ship/entries/images/mold-cabinet.jpg",
+    "static/ship/entries/images/refrigerator-guide.png",
+    "ship/src/entries/images/refrigerator-guide.png",
+    "ship/src/entries/images/refrigerator-guide",
+    "static/ship/entries/refrigerator.html",
+    "static/ship/welcome.html"
+  ]
+}

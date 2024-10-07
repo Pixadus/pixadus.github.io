@@ -4,7 +4,7 @@
 >
 > **Herman Melville, "Moby Dick"**
 
-When I first bought Andromeda a few months ago, the previous owner mentioned she'd been sitting in her berth for a year without interacting with her much. I,  being *utterly* inexperienced, didn't think much of it at the time. Unfortunately, it turns out that a year in a berth in the PNW with no ventilation means something that's a bogeyman to most sailors: *mold*. 
+When I first bought the Endurance a few months ago, the previous owner mentioned she'd been sitting in her berth for a year without interacting with her much. I,  being *utterly* inexperienced, didn't think much of it at the time. Unfortunately, it turns out that a year in a berth in the PNW with no ventilation means something that's a bogeyman to most sailors: *mold*. 
 
 ![](images/mold-mildew.png)
 
@@ -32,11 +32,11 @@ First step: getting rid of what's already present.
 
 Ozone has been [scientifically tested](https://doi.org/10.1080/01919510903043996) against a wide variety of molds, and found to be effective at killing it (including black mold!) - but only at high concentrations. Specifically, an ozone concentration of 35 ppm. Let's do some math to find out how to practically generate that much. 
 
-Andromeda has an LoA of 37 feet, a beam of 9.75 feet and interior height of maybe 5 feet. 
+The Endurnace has an LoA of 37 feet, a beam of 9.75 feet and interior height of maybe 5 feet. 
 
 ![](images/measurements.png)
 
-If we approximate Andromeda as just a box, that's an interior volume of 1803 cubic feet. Now, Andromeda's a sailboat-shape, not a box, so maybe shave off 1/3 of that number, for an (approximate) interior volume of 1200 cubic feet. 
+If we approximate the Endurance as just a box, that's an interior volume of 1803 cubic feet. Now, Endurance is sailboat-shaped, not box-shaped, so maybe shave off 1/3 of that number, for an (approximate) interior volume of 1200 cubic feet. 
 
 My ozone generator disperses 15,000 mg/hr. I want a concentration of 35 ppm ozone[^2] to inactivate all the mold air can reach. 1 g of ozone per cubic meter is [equivalently](https://duckduckgo.com/?q=ozone+ppm+conversions&ia=web) 467 ppm ozone in the air. 
 
@@ -47,7 +47,7 @@ Everything should be dead now - so time to prevent future growth.
 [^2]: https://www.tandfonline.com/doi/abs/10.1080/01919510903043996
 ## Mold Prevention
 
-Andromeda doesn't have good ventilation when she's closed up. I have two small passive cowl vents, one at the front, the other at the rear, and a decaying solar mushroom vent. So, lots of still air - she's the perfect environment for mold on a wet day, which happens often here. 
+The Endurance doesn't have good ventilation when she's closed up (yet). I have two small passive cowl vents, one at the front, the other at the rear, and a decaying solar mushroom vent. So, lots of still air ... collecting condensation ... means she's the perfect environment for mold on a wet day, which happens often here. 
 
 So I need ventilation. But that'll take time and parts - for now, I've killed off the local mold population, so I need a temporary solution until then. 
 

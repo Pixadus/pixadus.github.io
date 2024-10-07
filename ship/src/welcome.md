@@ -1,4 +1,4 @@
-# Log of the Andromeda
+# Log of the Endurance
 
 > Call me **Parker**.
 > 
@@ -6,12 +6,12 @@
 >
 > It is a way I have of **driving** off the spleen, and regulating the **circulation**. 
 
-Thus, the **Andromeda**. 
+Thus, the **Endurance**. 
 
 ![](images/sailboat-cropped.png)
 
 
-Andromeda is a 37' sloop designed by Bill Buchan Sr. and John Buchan in the 1960s in Olympia, WA as a bluewater cruiser, first assembled in 1975. I bought it in August 2024 as a liveaboard as I finish my undergraduate degree at the University of Washington. 
+The Endurance is a 37' sloop designed by Bill Buchan Sr. and John Buchan in the 1960s in Olympia, WA as a bluewater cruiser, first assembled in 1975. I bought it in August 2024 as a liveaboard as I finish my undergraduate degree at the University of Washington. 
 
 > I know not all that may be coming, but be it what it will, I'll go to it laughing. 
 
