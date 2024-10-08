@@ -17,7 +17,7 @@ The Endurance is a 37' sloop designed by Bill Buchan Sr. and John Buchan in the 
 
 ## The Grand TODO
 
-Everything that needs doing as of 10/3/2024. 
+Everything that needs doing as of 10/7/2024. 
 
 
 **Interior**
@@ -26,14 +26,17 @@ Everything that needs doing as of 10/3/2024.
 - [ ] Install a (larger) holding tank and redo head with an electric toilet
 - [ ] Add dorade vents + cowls
 - [ ] Diagnose refrigerator issues
-- [ ] Replace bedding with fresh cushions + sheets
+- [x] Replace bedding with fresh cushions + sheets
 - [ ] Redo interior lighting, removing some of the old fluorescents
 - [ ] Modify old brass kerosene lamps to become electric
 - [ ] Touch up some interior paint
+- [ ] Install drop-down trashcan
 
 **Exterior**
 - [ ] Clean the mainsail
 - [ ] Install roller furling on jib
 - [ ] Replace rigging lines
 - [ ] Bottom cleaning + a fresh coat of bottom paint
-- [ ] Clean and polish old exterior teak
+- [ ] Clean and polish old exterior teak + deck
+- [ ] Fix and fill in some small cracks on the fiberglass
+- [ ] Add ship's name to bow
