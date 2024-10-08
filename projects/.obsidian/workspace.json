@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "f908995d516570df",
+    "type": "split",
+    "children": [
+      {
+        "id": "2e54e2caa0600bb5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1294b456b31932e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mini/troubleshooting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "716e1326c0ec6cdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2639dacfe5d65e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93bacd8f83ed7403",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "86ec7319a112cc66",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "064bfc09dcf34a32",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1fa9f1e4e997695b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3910039004b1728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb876ce600b34362",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "mini/troubleshooting.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "976fa95fc8e99959",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "mini/troubleshooting.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e391122a690897e3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ec628ae1daf1717c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "mini/troubleshooting.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "1294b456b31932e0",
+  "lastOpenFiles": [
+    "_functions.md",
+    "mini/images/gaskets.png",
+    "dotfiles.md",
+    "_functions.md.md",
+    "SUMMARY.md",
+    "MRO Paper Thing.md",
+    "mini/troubleshooting.md",
+    "tools.md",
+    "datasheets/Hale_Brandt_Astronomy_Methods.pdf",
+    "datasheets/Hale.md",
+    "datasheets",
+    "untitled folder",
+    "mini/images/troubleshooting 2024-06-27 15.43.39.excalidraw.md",
+    "mini/images/troubleshooting 2024-06-27 15.43.39.excalidraw.svg",
+    "Excalidraw/Drawing 2024-06-27 15.40.18.excalidraw.md",
+    "Excalidraw",
+    "Excalidraw/Drawing 2024-06-27 15.40.01.excalidraw.md",
+    "mini/images/sparrow-what.gif",
+    "mini/images/cylinder 1.png",
+    "mini/images/cylinder.png",
+    "mini/images/spark-plug.png",
+    "mini/images/cels.png",
+    "mini/images",
+    "mini/troubleshoot",
+    "chapter_1.md",
+    "mini"
+  ]
+}

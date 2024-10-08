@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>S.V. Andromeda</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "rust" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="dotfiles.html">Dotfiles</a></li><li class="chapter-item expanded affix "><li class="part-title">Projects</li><li class="chapter-item expanded "><a href="mini/troubleshooting.html">Troubleshooting a dead cylinder</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">S.V. Andromeda</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-home"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="dotfiles"><a class="header" href="#dotfiles">Dotfiles</a></h1>
+<h3 id="kitty"><a class="header" href="#kitty">Kitty</a></h3>
+<details>
+  <summary>Expand config files</summary>
+<p><strong>Path</strong>: <code>~/.config/kitty/kitty.conf</code></p>
+<p>At bottom:</p>
+<pre><code class="language-bash">include current-theme.conf
+</code></pre>
+<p><strong>Path</strong>: <code>~/.config/kitty/current-theme.conf</code></p>
+<pre><code class="language-bash">## name: Alabaster Dark
+## author: Nikita Prokopov
+## license: MIT
+## upstream: https://raw.githubusercontent.com/anmolmathias/kitty-alabaster/master/alabaster-dark.conf
+
+## blurb: A dark color scheme adapted from Alabaster for the kitty terminal.
+#: The basic colors
+foreground #cecece
+background #0e1415
+selection_foreground #cecece
+selection_background #293334
+
+#: Cursor colors
+cursor #cd974b
+cursor_text_color #000000
+
+#: URL underline color when hovering with mouse
+url_color #cd974b
+
+#: The basic 16 colors
+#: black
+color0 #000000
+color8 #777777
+
+#: red
+color1 #e25d56
+color9 #f36868
+
+#: green
+color2 #73ca50
+color10 #88db3f
+
+#: yellow
+color3 #e9bf57
+color11 #f0bf7a
+
+#: blue
+color4 #4a88e4
+color12 #6f8fdb
+
+#: magenta
+color5 #915caf
+color13 #e987e9
+
+#: cyan
+color6 #23acdd
+color14 #4ac9e2
+
+#: white
+color7 #cecece
+color15 #ffffff
+
+#: kitty window border colors and terminal bell colors
+active_border_color #777777
+inactive_border_color #323738
+bell_border_color #e97e57
+
+#: Tab bar colors
+
+active_tab_foreground #cecece
+active_tab_background #0e1415
+inactive_tab_foreground #b8b8b8
+inactive_tab_background #323738
+</code></pre>
+</details>
+<h3 id="fish"><a class="header" href="#fish">Fish</a></h3>
+<details>
+  <summary>Expand config file</summary>
+<pre><code class="language-bash">if status is-interactive
+	# Commands to run in interactive sessions can go here
+end
+
+alias code "codium"
+alias e "exit"
+alias python "python3"
+alias venv ". /home/aethio/.venv/bin/activate.fish"
+
+function anotes-copy
+	command cp ~/.useful/latex/anotes-template.tex $argv
+	command mkdir images
+end
+</code></pre>
+</details><div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="troubleshooting-a-dead-cylinder"><a class="header" href="#troubleshooting-a-dead-cylinder">Troubleshooting a dead cylinder</a></h1>
+<p>When I first moved to Seattle, I picked up a 2012 Mini Clubman with the base 1.6L N16B16A engine with 100,000 miles on it. For the most part, it's been a great vehicle - though Minis have reputations for being maintenance-heavy, the previous owner took great care of it.</p>
+<p>However, a few weeks ago, the check engine light came on while I was driving from Colorado back to Seattle, and the engine started running rough - a vibration at highway speeds which increased in intensity as I dropped my speed. Now, Mini has two forms of CELs, helpfully color-coded:</p>
+<p><img src="mini/images/cels.png" alt="" /></p>
+<p>Mine was orange - so, whatever the issue is, the ECU considered it bad, but not engine-threateningly so. Still - I noticed the car was running a bit rough by now, and wanted to know what was up. I drove up to an auto-parts store and pulled the OBD-II diagnostic codes that the ECU supplies whenever the CEL-light is toggled, which yielded <em>four</em> codes:</p>
+<ul>
+<li><code>P0300: Cylinder Misfire, Several Cylinders</code></li>
+<li><code>P0301: Cylinder 1 Misfire Detected</code></li>
+<li><code>P0303: Cylinder 3 Misfire Detected</code></li>
+<li><code>P0304: Cylinder 4 Misfire Detected</code></li>
+</ul>
+<p><img src="mini/images/sparrow-what.gif" alt="" /></p>
+<p>Symptoms I noticed included rough idle, rough acceleration, significantly lower power than I was used to, and the above DTCs. This issue appeared <em>while</em> driving (rather than during some maintenance), which means something likely gave way while under stress.</p>
+<p>This, and the codes pulled, implied the issue was somewhere in my combustion.</p>
+<p>I opened up the engine and started off by pulling the ignition coils from the spark plugs to try and isolate it. Were all the cylinders misfiring? What happens if I removed the ignition plugs? Would it cause a change in the engine performance? Pulling coils 4,3 and 2 instantly resulted in an even lower idle RPM - implying those coils &amp; plugs worked more or less alright. Pulling ignition coil 1, however, resulted in <em>no change</em> in the idle RPM.</p>
+<p>Cylinder 1 wasn't just misfiring - it wasn't even firing in the first place!</p>
+<p>I tried replacing the 1st spark plug itself, but again - no change. At this point, I was out of tools, time and at the limit of my combustion troubleshooting skills - so I bit the bullet and decided to just drive back to Seattle on my remaining 3 cylinders.</p>
+<blockquote>
+<p>To avoid having unburned fuel getting thrown into the catalytic converter (bad), I unplugged the first fuel injector that supplied fuel to cylinder 1. Surprisingly, the engine was able to run alright on 3 cylinders, managing to keep a steady 80 mph most of the way ... though, fuel efficiency was pretty awful compared to all 4, and hills were disagreeable.</p>
+</blockquote>
+<p>Now I'm back in Seattle - let's troubleshoot.</p>
+<h1 id="observations"><a class="header" href="#observations">Observations</a></h1>
+<ol>
+<li>Cylinder 1 isn't working - pulling the ignition coil and/or disabling fuel to it results in the same performance as with both installed.</li>
+<li>Disabling the fuel injector while the ignition coil was plugged in resulted in the engine starting, then stopping itself after a few moments.</li>
+<li>Disabling the fuel injector with the ignition coil unplugged resulted in the engine starting and continuing to run.</li>
+<li>Swapping distributor coils does not affect the issue.</li>
+</ol>
+<p>I've often found starting from the most basic level and gradually isolating the problem from there works best when it comes to complicated systems - so let's start with a refresher on internal combustion engines.</p>
+<h1 id="regarding-combustion"><a class="header" href="#regarding-combustion">Regarding Combustion</a></h1>
+<p>Here's a simplified diagram of what goes on in a cylinder:</p>
+<p><img src="mini/images/cylinder.png" alt="" />
+The cylinder needs four things to achieve a successful reaction:</p>
+<ol>
+<li><strong>Fuel</strong> - component 1 of a combustion reaction.</li>
+<li><strong>Air</strong> - component 2 of a combustion reaction.</li>
+<li><strong>Spark</strong> - to ignite the air/fuel mixture (energy for the combustion reaction).</li>
+<li><strong>Compression</strong> - pressurizes the sparse fuel/air mixture to approx. 160 psi, increasing the density and making it <em>much</em> more flammable.</li>
+</ol>
+<blockquote>
+<p><strong>Of note</strong>: the higher our compression (pressure) at the spark stage, the less fuel we need to successfully cause an ignition since the molecules are closer together - therefore, higher compressions generally result in higher gas mileage than lower. On the flip side, the crankshaft needs to work harder to compress the chamber - so there's a middle ground to find.</p>
+</blockquote>
+<p>The fuel/air mixture is supplied by the fuel injector, spark by the spark plug &amp; distributor coil, and compression from the piston maintaining a tight seal with the chamber itself. We'll test each one to make sure they work, starting with the easiest to test (spark) and moving to the hardest (fuel/air).</p>
+<h2 id="spark"><a class="header" href="#spark">Spark</a></h2>
+<p>We'll start with spark.</p>
+<p><img src="mini/images/spark-plug.png" alt="" />
+The N16B16A has 4 ignition coils set directly on the plugs themselves. Each ignition coil is controlled by the ECU, but the Haynes manual doesn't have a wiring diagram to indicate exactly how.</p>
+<blockquote>
+<p>With only 3 wires, likely one <code>+12V</code>, one is <code>GND</code>, and the third a data line to tell the plug to fire.</p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Replace spark plug, test
+<ul>
+<li><strong>Result</strong>: No change</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Check distributor coil, swap with other plug
+<ul>
+<li><strong>Result</strong>: No change</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Check wiring leading to ECU - might be broken?
+<ul>
+<li><strong>Note</strong>: This would involve stripping wires and testing for continuity, so I'll come back to this after working through some other basic tests.</li>
+</ul>
+</li>
+</ul>
+<h2 id="compression"><a class="header" href="#compression">Compression</a></h2>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Run a compression test on cylinder 1. Should be ~166 psi according to the Haynes manual.
+<ul>
+<li><strong>Links</strong>:<a href="https://www.mini2.com/threads/compression-test.347617/">forums post 1</a>, <a href="https://www.mini2.com/threads/injector-not-working.353103/">forums post 2</a>, <a href="https://dannysengineportal.com/wet-compression-test-how-to-do-it-what-will-it-tell-you/">article 1</a></li>
+<li><strong>Result</strong>: 38 psi</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Test cylinder 2 to provide a comparison.
+<ul>
+<li><strong>Result</strong>: 180 psi</li>
+</ul>
+</li>
+</ul>
+<p>Compression is very low on cylinder 1. Following the Haynes manual, I added about a teaspoon of oil to cylinder 1 and retested to see if it was a piston or gasket/valve issue.</p>
+<blockquote>
+<p><strong>Ref. Haynes:</strong> If the compression increases after the oil is added, the piston rings are likely worn. If it doesn't increase significantly, the leakage is occurring at the valves or head gasket. Leakage past the valves might be caused by burned valve seats and/or faces or warped, cracked or bent valves.</p>
+<p>If two adjacent cylinders have equally low compression, strong possibility the head gasket between them is blown - coolant in combustion chambers or crankcase would verify this.</p>
+</blockquote>
+<p>Fortunately for my wallet, the compression didn't go up - so likely not a piston issue. <em>Un</em>fortunately, that means I still need to isolate it to either the valves or head gasket. I'm inclined to believe it may be the inlet / exhaust valves - were it the head gasket I might smell coolant in the exhaust, and the thinnest (and most likely) breakage spot would be between cylinder 1 and cylinder 2 ... i.e. we'd expect to see a low compression in cylinder 2 with a head gasket issue.</p>
+<p><img src="mini/images/gaskets.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
