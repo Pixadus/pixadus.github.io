@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a3e7b4b07b43dda7",
+        "id": "56a549e12e6e104f",
         "type": "tabs",
         "children": [
           {
-            "id": "4670d77408a414a4",
+            "id": "303ccd942b23ce05",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ship/src/welcome.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ship/src/welcome.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ship/src/welcome.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ship/src/welcome.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,33 +138,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4670d77408a414a4",
+  "active": "303ccd942b23ce05",
   "lastOpenFiles": [
-    "public/ship/entries/images/seal.gif",
-    "public/ship/entries/images/refrigerator-guide.png",
-    "public/ship/entries/images/refrigerator-guide",
-    "public/ship/entries/images/mold-mildew.png",
-    "public/ship/entries/images/mold-cabinet.jpg",
-    "public/ship/entries/images/measurements.png",
-    "public/ship/entries/images/head.png",
-    "public/ship/entries/images/head-out.png",
-    "public/ship/entries/images/baby.jpeg",
-    "public/ship/FontAwesome/fonts/fontawesome-webfont.woff2",
-    "public/ship/FontAwesome/fonts/fontawesome-webfont.woff",
-    "public/ship/FontAwesome/fonts/fontawesome-webfont.ttf",
-    "public/ship/FontAwesome/fonts/fontawesome-webfont.svg",
-    "public/ship/FontAwesome/fonts/fontawesome-webfont.eot",
-    "public/ship/FontAwesome/fonts/FontAwesome.ttf",
-    "public/ship/FontAwesome/css/font-awesome.css",
-    "public/ship/images/sailboat-cropped.png",
-    "public/ship/fonts/source-code-pro-v11-all-charsets-500.woff2",
-    "public/ship/fonts/open-sans-v17-all-charsets-regular.woff2",
-    "public/ship/fonts/open-sans-v17-all-charsets-italic.woff2",
-    "public/ship/favicon.svg",
-    "ship/src/entries/refrigerator.md",
-    "ship/src/entries/mold.md",
-    "ship/src/welcome.md",
+    "ship/src/entries/vents.md",
+    "ship/src/entries/vents2.md",
+    "static/ship/images/sailboat-cropped.png",
+    "static/ship/images",
+    "static/ship/entries/images/vents/option3.png",
+    "static/ship/entries/images/vents/option2.png",
+    "static/ship/entries/images/head-out.png",
+    "static/ship/entries/images/baby.jpeg",
+    "static/ship/entries/images/vents/option1.png",
+    "static/ship/entries/images/vents",
+    "static/ship/entries/images/head.png",
+    "static/ship/entries/images/refrigerator-guide",
+    "static/ship/entries/images/measurements.png",
+    "static/ship/entries/images/mold-cabinet.jpg",
+    "static/ship/entries/images/seal.gif",
     "ship/src/SUMMARY.md",
+    "ship/src/entries/images/vents/option1.png.crswap",
+    "ship/src/entries/images/vents",
+    "ship/src/entries/sail-cleaning.md",
+    "ship/src/entries/refrigerator.md",
+    "ship/src/entries/images/vents.png.crswap",
+    "static/ship/welcome.html",
+    "static/ship/todo.html",
+    "ship/src/todo.md",
+    "static/ship/entries/vents.html",
+    "ship/src/welcome.md",
+    "public/ship/entries/images/refrigerator-guide",
+    "ship/src/entries/mold.md",
     "ship/src/entries/head.md"
   ]
 }

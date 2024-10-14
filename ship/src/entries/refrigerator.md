@@ -1,4 +1,4 @@
-# 10/4/24 - Refrigerator troubles
+# 10/4/24 - Repairing an old refrigerator
 
 > "... upon which Jonah mixed him a pitch-like potion of gin and molasses, which he swore was a sovereign cure for all colds ..."
 >
