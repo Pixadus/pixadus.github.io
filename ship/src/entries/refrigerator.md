@@ -15,7 +15,7 @@ Endurance has an Adler Barbour BD 2.5 ColdMachine - an old, *old* piece of techn
 
 Some troubleshooting later - turned out the refrigerant was **empty**. Meaning I had a leak somewhere. 
 
-Meaning, I could either hunt down a source of R12 - no thank you in 2024 - retrofit my current system to use modern refrigerant - difficult in Washington (refrigerant sale banned) - or buy a new refrigerator. 
+Meaning, I could either hunt down a source of R12 (and the leak) - no thank you in 2024 - retrofit my current system to use modern refrigerant - difficult in Washington (refrigerant sale banned) - or buy a new refrigerator. 
 
 I think I'll go with the last option. It's simple, easy and the system will come pre-charged. Until then, I have a temporary solution:
 

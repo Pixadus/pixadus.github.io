@@ -8,7 +8,7 @@ Endurance has three vents on it currently:
 
 The mushroom ventilator is in a good location, so I'll replace it. The passive vents work okay but should probably have some way to prevent water from coming in with the air - but for now, I'll just replace the mushroom vent and add some ventilation to the head, which lacks it currently.
 
-I settled on some [Vetus dorade boxes](https://www.fisheriessupply.com/vetus-denouden-dorade-boxes) that are designed to allow airflow while keeping back water. Montage time.
+I settled on some [Vetus dorade boxes](https://www.fisheriessupply.com/vetus-denouden-dorade-boxes) that are designed to allow airflow while keeping back water. 
 
 ![](images/vents/vent-montage-1.png)
 ![](images/vents/vent-montage-2.png)
@@ -20,4 +20,4 @@ Next, I tackled the bathroom vent.
 ![](images/vents/vent-montage-3.png)
 After adding some holes for screws and some caulk for waterproofing:
 
-![](entries/images/vents/bathroom-vent.jpg)
+![](images/vents/bathroom-vent.jpg)
