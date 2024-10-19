@@ -4,15 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "56a549e12e6e104f",
+        "id": "33514a865c653451",
         "type": "tabs",
         "children": [
           {
-            "id": "303ccd942b23ce05",
+            "id": "bf06e68292c66ba5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ship/src/entries/electrical.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "electrical"
             }
           }
         ]
@@ -35,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -50,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -58,14 +68,17 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "2f5c282aabce189b",
@@ -81,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ship/src/entries/vents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +102,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for vents"
             }
           },
           {
@@ -97,9 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ship/src/entries/vents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from vents"
             }
           },
           {
@@ -110,7 +129,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -118,7 +139,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ship/src/entries/vents.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of vents"
             }
           }
         ]
@@ -138,36 +163,38 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "303ccd942b23ce05",
+  "active": "bf06e68292c66ba5",
   "lastOpenFiles": [
-    "ship/src/entries/vents.md",
-    "ship/src/entries/vents2.md",
+    "ship/src/entries/images/electric/electricals.png",
+    "ship/src/entries/images/electric",
     "static/ship/images/sailboat-cropped.png",
     "static/ship/images",
-    "static/ship/entries/images/vents/option3.png",
-    "static/ship/entries/images/vents/option2.png",
     "static/ship/entries/images/head-out.png",
     "static/ship/entries/images/baby.jpeg",
+    "static/ship/entries/images/vents/IMG_0220.jpg",
+    "static/ship/entries/images/vents/option3.png",
+    "static/ship/entries/images/vents/option2.png",
+    "static/ship/entries/images/vents/vent-montage-1.png",
+    "static/ship/entries/images/vents/vent-montage-3.png",
     "static/ship/entries/images/vents/option1.png",
+    "static/ship/entries/images/vents/vent-montage-2.png",
     "static/ship/entries/images/vents",
-    "static/ship/entries/images/head.png",
-    "static/ship/entries/images/refrigerator-guide",
-    "static/ship/entries/images/measurements.png",
-    "static/ship/entries/images/mold-cabinet.jpg",
-    "static/ship/entries/images/seal.gif",
+    "ship/src/todo.md",
     "ship/src/SUMMARY.md",
-    "ship/src/entries/images/vents/option1.png.crswap",
-    "ship/src/entries/images/vents",
+    "ship/src/entries/electrical.md",
+    "ship/src/entries/head.md",
+    "ship/src/entries/vents.md",
+    "ship/src/entries/vents2.md",
+    "static/ship/entries/images/vents/IMG_0212.HEIC",
+    "static/ship/entries/images/vents/IMG_0218.HEIC",
+    "static/ship/entries/images/vents/IMG_0214.HEIC",
+    "static/ship/entries/images/vents/IMG_0217.HEIC",
+    "static/ship/entries/images/vents/IMG_0220.HEIC",
+    "static/ship/entries/images/vents/IMG_0216.HEIC",
+    "static/ship/entries/images/vents/IMG_0221.HEIC",
     "ship/src/entries/sail-cleaning.md",
     "ship/src/entries/refrigerator.md",
-    "ship/src/entries/images/vents.png.crswap",
-    "static/ship/welcome.html",
-    "static/ship/todo.html",
-    "ship/src/todo.md",
-    "static/ship/entries/vents.html",
     "ship/src/welcome.md",
-    "public/ship/entries/images/refrigerator-guide",
-    "ship/src/entries/mold.md",
-    "ship/src/entries/head.md"
+    "ship/src/entries/mold.md"
   ]
 }
