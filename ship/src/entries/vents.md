@@ -18,5 +18,6 @@ I settled on some [Vetus dorade boxes](https://www.fisheriessupply.com/vetus-den
 Next, I tackled the bathroom vent.
 
 ![](images/vents/vent-montage-3.png)
+After adding some holes for screws and some caulk for waterproofing:
 
-Result
+![](entries/images/vents/bathroom-vent.jpg)
