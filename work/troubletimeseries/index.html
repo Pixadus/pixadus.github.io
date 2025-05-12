@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Trouble with Timeseries</title>
+  <meta name="description" content="Problems due to different seeing conditions">
+  
+  
+  <link rel="icon" type="image/x-icon" href="&#x2F;images&#x2F;favicon.ico">
+  
+
+  <link rel="stylesheet" href="https://www.andromeda.is/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.andromeda.is">Andromeda</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="https:&#x2F;&#x2F;live.staticflickr.com&#x2F;65535&#x2F;52900733642_1b37f47789_k_d.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Trouble with Timeseries</h1>
+                <span class="page-description">Problems due to different seeing conditions</span>
+                <span class="page-date">2023&#x2F;05&#x2F;16</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <h3 id="problem-statement">Problem statement</h3>
+<p>OCCULT-2 traces out a number of features, many of which match throughout the timeseries. However, changes in the local seeing create inaccuracy with OCCULT in consecutive images, and prevent accurate detection of feature timelines. </p>
+<h3 id="supporting-observations">Supporting observations</h3>
+<p>Some lines dramatically lengthen as a result of OCCULT bridging multiple observations, or dramatically shorten. Many lines vanish and reappear after some time due to changes in local seeing. </p>
+<h3 id="expected-or-ideal-outcomes">Expected or ideal outcomes</h3>
+<p>Seeing should not affect changes so much - ideally, we can find a filter or set of filters that reduce the impact of seeing conditions. </p>
+<p>Below, I'll tinker around with skimage and OpenCV to see what we can get. </p>
+<h3 id="the-process">The Process</h3>
+<p>We're starting off with this base image:</p>
+<p><img src="/images/work/base_image.png" alt="Base image" /></p>
+<p>We need to bring out those individual fibular strands, and make them clearer. They're pretty indistinct as is, and blurry. If we sharpen the image with skimage's <a href="https://scikit-image.org/docs/stable/auto_examples/filters/plot_unsharp_mask.html">unsharp mask</a> (<code>radius=1, amt=4.0</code>), we get something like this:</p>
+<p><img src="/images/work/base_sharpened.png" alt="Sharpened base image" /></p>
+<p>Better. Now - working on the entire image can get chaotic and force us to zoom in a lot. Let's focus on fibrils in a small sub-section - the bottom left has some distinct fibrils. </p>
+<p><img src="/images/work/base_sharp_cropped.png" alt="Sharpened base cropped" /></p>
+<p>Now. We have a lot of background here - let's try some <a href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding_guide.html">thresholding techniques</a>. <strong>Otsu's method</strong> is an advanced technique for this - it'll look at the histogram of the image, look for two peaks, and then create a threshold between two threshold &quot;peak groups&quot;. <a href="https://upload.wikimedia.org/wikipedia/commons/3/34/Otsu%27s_Method_Visualization.gif">This GIF does a great job of visualizing it</a>. I superimposed the original image to ensure Otsu was correctly measuring out sections. </p>
+<p><img src="/images/work/otsu_thresh.png" alt="Otsu thresholded image" /></p>
+<p>Otsu does an <em>okay</em> job at this, but some features are cut off. I subtracted a <code>0.05</code> offset to the threshold otsu found, which resulted in </p>
+<p><img src="/images/work/otsu_thresh_cor.png" alt="Otsu corrected image" /></p>
+<p>Better. This offset added some background noise - but we can deal with that later. Now, we've got some distinct fibrils - if we try out OCCULT on it, </p>
+<p><img src="/images/work/otsu_occult.png" alt="OCCULT-traced images" /></p>
+<p>Similar results, but without a lot of the more indistinct fibrils that may blend into the background in low-seeing conditions. While it does remove some fibrils, I think the tradeoff in removing low-confidence fibrils is worthwhile. </p>
+<p>Now, to try and make our fibrils a bit more distinct. skimage has an <a href="https://scikit-image.org/docs/stable/auto_examples/edges/plot_ridge_filter.html#sphx-glr-auto-examples-edges-plot-ridge-filter-py">awesome script to test out</a> the variety of segmentation functions available to skimage. </p>
+<p><img src="/images/work/skimage_segmentation.png" alt="Skimage variety of segmentation types" /></p>
+<p>I'll probably go near-sighted just trying to make out these little images. But, of the results, I'm liking the look of both Hessians and the Meijering with <code>sigma=1</code>. </p>
+<p><img src="/images/work/hessian-meijering.png" alt="Hessian and meijering filters" /></p>
+<p>Let's go with the Hessian. Now - the Hessian matrix is a brilliant idea in image processing. If you've taken multivariable calculus or linear algebra before, you might remember it - mathematically, the Hessian can be represented as </p>
+<p>$$\vec{H}_f = \begin{bmatrix} \frac{\delta I^2}{\delta x^2} &amp; \frac{\delta I^2}{\delta x\delta y} \\ \frac{\delta I^2}{\delta y\delta x} &amp; \frac{\delta I^2}{\delta y^2} \end{bmatrix}$$</p>
+<p>In our context, this matrix describes the <strong>second order intensity variations</strong> around a given pixel. The eigenvalues of that Hessian matrix per pixel can then be used to evaluate the &quot;local intensity curvature&quot; - <a href="https://milania.de/blog/Introduction_to_the_Hessian_feature_detector_for_finding_blobs_in_an_image">this article does a much better job of explaining it</a> than I can.</p>
+<p>We can deal with the large white blobs by just intersecting the image with the otsu tracing - leading to </p>
+<p><img src="/images/work/hessians.png" alt="Hessian segmentations" /></p>
+<p>If we try out OCCULT-2 on this, </p>
+<p><img src="/images/work/occult_hessian.png" alt="Occult on Hessian" /></p>
+<p>It's hard to say if it's better or worse. Many well-defined features are shared, some are lengthened, and some are gotten rid of entirely. Still - the entire goal of this tinkering was to reduce the impact of varied seeing conditions. If we try to compare the two timeseries now ...</p>
+<p><img src="/images/work/slow.gif" alt="Slower comparison" /></p>
+<p>Or, faster,</p>
+<p><img src="/images/work/fast.gif" alt="Fast comparison" /></p>
+<p>Graphing OCCULT-2 fibrils along this sequencee, </p>
+<p><img src="/images/work/occult-slow.gif" alt="OCCULT-2 over timeseries (slow)" /></p>
+<p>Faster,</p>
+<p><img src="/images/work/occult-fast.gif" alt="OCCULT-2 over timeseries (fast)" /></p>
+<p>We see OCCULT recognizes many of the same fibrils and holds them relatively constant over time ... but many are extremely short lived, even where we can visually observe them still existing. In this scenario, it's likely OCCULT itself that is failing to recognize the existence of them.</p>
+<p>This is ... <em>okay</em>. We could work with this. But, we're able to transform the image such that it has visibly consistent feature regions - having something more robustly able to detect these centerlines would be preferrable. </p>
+<h2 id="skimage-segmentation">skimage segmentation</h2>
+<p>I played around with some of <a href="https://scikit-image.org/docs/stable/api/skimage.segmentation.html">skimage's segmentation methods</a> (of which there's many). I achieved some good results with our base Hessian image through the MorphACWE (implemented as the <strong>morphological Chan-Vese</strong> algorithm in skimage), resulting in</p>
+<p><img src="/images/work/acwe_segmentation.png" alt="ACWE Segmentation" /></p>
+<p>And with the <a href="https://scikit-image.org/docs/stable/auto_examples/edges/plot_contours.html">find_contours</a> method, </p>
+<p><img src="/images/work/acwe-contours.png" alt="ACWE and contour methods" /></p>
+<p>MorphACWE creates more &quot;normalized&quot; areas by virtue of doing some image transformations to smooth out regions - the contour method, by contrast, finds <em>every</em> area where the image intensity goes from 0 -&gt; 1, and makes a polygon out of it. </p>
+<p>I think we could achieve some good results by doing a contour evolution.</p>
+<p>So, let's try to smooth the image out, &quot;fattening&quot; light regions. Let's try out a Gaussian first. </p>
+<p><img src="/images/work/gausshess.png" alt="Gaussian hessian" /></p>
+<p>If we apply another Otsu filter to get back to a binary image, </p>
+<p><img src="/images/work/gaussian-otsu.png" alt="Gaussian otsu" /></p>
+<p>If we start to plot our contours now, we see</p>
+<p><img src="/images/work/gauss-cntrs.png" alt="Gaussian contours" /></p>
+<p>Much smoother, and some previously non-joined fibrils are now joined. However - this is an issue as well, as now we have some close distinct fibrils that are now joined together, which we don't necessarily want. That said - let's try to calculate some centerlines through these by using the <a href="https://github.com/ungarj/label_centerlines">label_centerlines library</a>. </p>
+<p><strong>Note</strong>: Offstage, I've been really trying to bring out every single visually identifiable fibril, which I really just don't think is possible with an algorithmic approach. Neural networks might do a bit better. But still, we'll try to work with this Gaussian contours setup. I think we can come up with something good. </p>
+<p>Okay. Label centerlines. This library is designed to work with <a href="https://shapely.readthedocs.io/en/stable/reference/shapely.Polygon.html">shapely Polygons</a> - and our find_contours function just returns lists of points in (x,y) format, so polygon conversion is nice and easy.</p>
+<p><img src="/images/work/label_centerlines_hessgauss.png" alt="Label contours for both the base Hessian and gaussian version" /></p>
+<p>label_centerlines did exactly what we asked of it - but, there's some definite issues with <strong>unrelated features</strong> being joined (see left center) and some <strong>single</strong> features <em>not</em> being correctly joined (see bottom left).</p>
+<p>We can try some <a href="https://scikit-image.org/docs/stable/api/skimage.morphology.html">morphological transforms</a> to help with this. <a href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_morphology.html#dilation">Dilations</a> blow up light areas, while <a href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_morphology.html#erosion">erosions</a> reduce light areas. Focusing on the bottom left $(110\times90)$ px region,</p>
+<p><img src="/images/work/d1e1.png" alt="d1e1" /></p>
+<p>Great! Except, now ...</p>
+<p><img src="/images/work/d1e12.png" alt="d1e12" /></p>
+<p><img src="https://media.tenor.com/Vu4cdN5l0dQAAAAC/the-owl-house-luz.gif" alt="Luz" /></p>
+<p>I know. I know! I ought to have expected it. Dilations will close small spaces, and will not distinguish between spaces between disconnected fibrils and separate features.</p>
+<p>Okay.</p>
+<p>Let's think. Easiest to address - first - our features are pretty grainy, and there's a lot of small holes everywhere. Let's try dealing with that first.</p>
+<p><img src="/images/work/dial-sh-so.png" alt="Dilation, small hole fill, small object removal" /></p>
+<p>Dilated (<code>square=1</code>), filled small holes (<code>s=64</code>), removed small objects (<code>s=10</code>) (<strong>Note</strong>: any larger small object size removed parts of fibrils).</p>
+<p>Now.</p>
+<p>What if we did a polyfit on larger polygons? Take an average over all polygon sizes; those that are greater than the average, do a polyfit, add smaller polygons to them. </p>
+<p>This is an interesting idea. Let's try it. </p>
+<p><img src="/images/work/polyfit.png" alt="Polyfit results" /></p>
+<p>Nice! Cool thought. Still - the broken-up-ness of individual features is making the lines curly and go all over the place. I did some further reading into <a href="https://scikit-image.org/docs/stable/api/skimage.filters.html">skimage's filters</a> - and there are some that could help with this, such as the Meijering (I know, I dismissed it earlier in favor of the Hessian - but what if we did both?)</p>
+<p><img src="/images/work/meijering.png" alt="Meijering results" /></p>
+<p><code>sigma=(1,7,1)</code>. Adding a median filter to make things a bit less contrasty, and thresholding to disconnect some unrelated features, we get </p>
+<p><img src="/images/work/threshold_filt.png" alt="Thresholded meijering" /></p>
+<p>This looks .. okay. Pretty jagged as a whole. Still, I did more reading on models other than threshold-based contouring to match edges, and did further reading into Morphological ACWE. The <a href="https://github.com/pmneila/morphsnakes">old github page on Morphsnakes</a> has some pretty sweet animations, too - </p>
+<p><img src="https://github.com/pmneila/morphsnakes/raw/master/examples/anim_dendrite.gif" alt="Morphsnakes" />
+<img src="https://github.com/pmneila/morphsnakes/raw/master/examples/anim_europe.gif" alt="Morphsnakes 2" /></p>
+<p>Which made me quite interested in trying them out once more, as they could be used to deal with this jaggedness. </p>
+<p><img src="/images/work/morphres.png" alt="MorphACWE and MorphGAC" /></p>
+<p>ACWE (cyan) with checkerboard set <code>s=4</code> and <code>i=10</code>, GAC (blue) with thresholded version of Meijering as level set (<code>t=0.3</code>), <code>i=1</code>, <code>b=0</code>.</p>
+<p>Better results from ACWE so far. </p>
+<hr />
+<p>Another day, another night of background thoughts. I'm worried the amount of processing we've already done will lead to seeing affecting the ability for morphsnakes to ID fibrils significantly. Still - we'll address that soon. MorphACWE has done a great job with only <code>i=10</code> - but, I think we can make it do better. Things to try today: </p>
+<ol>
+<li>Create level set from thresh (better)</li>
+<li>Create level set out of local mins and maxes</li>
+<li>Try local thresholding following initial otsu to better define fibrils</li>
+<li>Visualize evolution of morphsnakes in all scenarios using morphsnake callback</li>
+</ol>
+<p>Let's try out some different level sets with MorphGAC.</p>
+<ol>
+<li><code>base=filt1, init_ls = filt1&gt;0.3</code></li>
+<li><code>base=inv_gauss_grad, init_ls=filt1&gt;0.3</code></li>
+<li><code>base=filt1, init_ls=extrema.local_maxima</code></li>
+</ol>
+<p>
+    <img src="/images/work/evo1.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/evo2.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/evo3.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+</p>
+<p>And trying ACWE (<code>base=(filt1[filt1 &lt; 0.33] = 0)</code>)</p>
+<ol>
+<li><code>init_ls = filt1&gt;0.3</code> </li>
+<li><code>init_ls = checkerboard_level_set s=2</code> </li>
+<li><code>init_ls = morphology.extrema.local_maxima</code></li>
+</ol>
+<p>
+    <img src="/images/work/acwe1.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/acwe2.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+    <img src="/images/work/acwe3.gif" style="max-width: 32%; object-fit: cover; height: 270px;">
+</p> 
+<p><strong>GAC 2</strong> and <strong>ACWE 2</strong> are best so far; though I intend on playing around with both types later. If we can get a more dense seed pattern, ACWE 3 yields promising results. </p>
+<p>Now, changes in seeing. This isn't a bad issue - <strong>except</strong> - for issues that become apparent such as in GAC 3, where features above and below combine. This will happen - so we need to find a way to prevent 2+ fibrils from &quot;merging&quot; into one due to closeness. </p>
+<p>Is there a way to quantify the linearity of polygons? Or ... can we divide a polygon into two maximum-area subpolygons? ... Some brief reading online leads me to believe this a challenging problem. </p>
+<p>Which, circles back to optimizing ACWE further. If we can encourage a style similar to ACWE3, except with more seed points ... let's try to find more seed points. Or, smooth further?</p>
+<hr />
+<p>Unfortunately, further optimization of the Hessian yielded little improvement. The main issue is the gap <strong>between</strong> some fibrils is equal to the gap <strong>along</strong> fibrils - so any work to close these gaps along also causes gaps between to be closed, and active contouring isn't designed to do any distinguishing here. </p>
+<p>Also of note - the fibrils are barely distinguishable from one another in the initial image itself - so further optimization here might not do much ... unless ... we increase the offset in the otsu thresholding even further ... no, that just results in more noise, unfortunately. If we try <a href="https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_niblack_sauvola.html">Sauvola thresholding</a> and the <a href="https://scikit-image.org/docs/stable/api/skimage.filters.rank.html#skimage.filters.rank.otsu">local otsu</a> as an alternative to the <a href="https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding_guide.html">global otsu</a>, </p>
+<p><img src="/images/work/local_thresholds.png" alt="Local thresholding" /></p>
+<p>(<code>window_size=45</code> in both cases). The Hessians then look like</p>
+<p><img src="/images/work/local_hessians.png" alt="Local hessians" /></p>
+<p>Interesting. Hmm. Comparing the global and local thresholding for Otsu,</p>
+<p><img src="/images/work/otsus.png" alt="Global vs Local Otsu" /></p>
+<p>with a corresponding Meijering for the local <code>sigmas=range(1,5,1)</code> of</p>
+<p><img src="/images/work/meijering_local.png" alt="Local Meijering" /></p>
+<p>... I don't think any amount of local filtering is going to help us here. The only thing that comes to mind is that we have to split large polygons into sub-polygons depending on their curvature.</p>
+<p>Ugh.</p>
+<p>Fine.</p>
+<hr />
+<p>Tracing out centerlines <strong>without</strong> our <a href="/work/split-curvature/">curvature segmentation</a> and parameters <code>max_paths=10, smooth_sigma=13</code>, we find</p>
+<p><img src="/images/work/centerlines_noseg.svg" alt="no curvature segmentation" /></p>
+<p>Not the best - there's a lot of curves that are much too curvy. We could ignore these by filtering out high-curvature polygons/centerlines, but let's try out our fancy new curvature segmentation algorithm first. </p>
+<p>Let's try segmentation with our default parameters.</p>
+<p><img src="/images/work/polygons_default.svg" alt="Segmentation comparison" /></p>
+<p>Fantastic! Already we're seeing some marked difference in identified fibrils. If we loosen the parameters a bit to accomodate for smaller and tighter polygons, (<code>min_area=150, percent_thresh=0.2</code>), and then an upper limit by loosening the threshold a bit (<code>min_area=150, percent_thresh=0.3</code>),</p>
+<p><img src="/images/work/polygons_seg2.svg" alt="Updated segmentations" /></p>
+<p>The tighter version (<code>0.2</code>) has a lot more cohesivity of polygons than the looser version, particularly visible on the lower &quot;C&quot; curve toward the base of the image center. Let's try it out and trace out centerlines in all polygons of <code>area &gt; 150</code>, using both the <code>get_centerlines</code> library and <code>np.polyfit(deg=2)</code>. </p>
+<p><img src="/images/work/centerlines_seg.svg" alt="get_centerlines and polyfit" /></p>
+<p>Looking really good. <code>get_centerlines</code> conforms to the polygons a lot better, while polyfit generates much smoother lines - let's take another look at the OG image to see which we want. </p>
+<p><img src="/images/work/base_sharp_cropped.png" alt="Sharpened base cropped" /></p>
+<p><img src="/images/work/centerlines_oversharp.svg" alt="Centerlines overlaid on sharpened image" /></p>
+<p>I think the <code>polyfit</code> method works better, to be honest - few of our features have visible high curvature, however the contrast isn't good enough to definitively say one way or the other. </p>
+<hr />
+<p><strong>Note</strong>: This method ignores a lot of fibrils, in favor of &quot;fibril regions&quot;. I believe we can either focus on bringing out every single fibril and having a ton of noise, or bringing out just a few &quot;fibular groups&quot; and having them be relatively well-defined over several images. </p>
+<p>These centerlines therefore should be representative of the evolution of fibular groups rather than fibrils themselves. It's an unideal result - but the lack of consistent seeing and the fact that our fibrils operate right at the resolution limit of the imaging camera may make this an unavoidable dichotomy. </p>
+<hr />
+<p><strong>Note 2</strong>: As a <strong>todo</strong>, let's try matching together fibrils that are just barely separated (such as around <code>x=50, y=200</code>) in the <code>polylines</code> centerlines. </p>
+<hr />
+<p>Either later tonight or tomorrow I'll look at how these centerlines evolve over the full timeseries, and compare it with our OCCULT evolution. Pending further optimization of our curvature segmentation parameters depending on the results of the timeseries evolution, it's almost July and I'll need to call this good in favor of working on the paper + getting results. </p>
+<p>This work should be considered, for now, the best I've been able to do with the current resolution limit. Once updated data with a higher resolution limit from DKIST becomes available, I'd like to revisit this. </p>
+<hr />
+<p>With the original slice, the execution time of our demo script is:</p>
+<pre><code>Executed in    7.11 secs    fish           external
+   usr time   10.18 secs  568.00 micros   10.18 secs
+</code></pre>
+<p>With the full image, this becomes </p>
+<pre><code>Executed in   78.39 secs    fish           external
+   usr time   32.99 secs  299.00 micros   32.99 secs
+</code></pre>
+<p><img src="/images/work/centerlines_fullimg.svg" alt="Centerlines on full image" /></p>
+<p>Runtime triples, but is with the full curvature segmentation in place. For the full 120 image sequence assuming similar quantity of fibrils on average, the runtime will be about 3840 seconds (just over an hour). </p>
+<p><img src="/images/work/polyfit.gif" alt="Polyfit gif" />
+<img src="/images/work/occult-slow.gif" alt="OCCULT-2 over timeseries (slow)" /></p>
+<p>Fibrils don't disappear as much as in the OCCULT-2 version - but they do get disconnected and disjointed when seeing is bad. To help reduce noise, let's first add another minimum area filter (don't calculate polylines for less than 300 pixels area) and only run the script for a period of good seeing (62-87).</p>
+<p><img src="/images/work/polyfit_goodseeing.gif" alt="Polyfit goodseing gif" /></p>
+<p>Similar results. While this isn't what was hoped for - it is an alternate method to OCCULT-2 that we can use. Let's characterize them and continue. </p>
+
+        </div>
+        
+        
+
+        
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Parker Lamb</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:parker@plamb.com">parker@plamb.com</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Center normal images
+  $("p").each( function(index, element) {
+    const items = $(this)[0].children;
+    if (items.length > 0 && items[0].tagName == 'IMG') {
+      $(this).css("text-align", "center");
+    }
+  } )
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+      })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<!-- Math rendering -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'] ]}});
+</script>
+
+
+    </body>
+
+</html>

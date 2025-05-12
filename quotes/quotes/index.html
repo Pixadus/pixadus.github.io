@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Quotes</title>
+  <meta name="description" content="Quotes.">
+  
+  
+  <link rel="icon" type="image/x-icon" href="&#x2F;images&#x2F;favicon.ico">
+  
+
+  <link rel="stylesheet" href="https://www.andromeda.is/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.andromeda.is">Andromeda</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="https:&#x2F;&#x2F;live.staticflickr.com&#x2F;65535&#x2F;52863015427_a6b1046493_c_d.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Quotes</h1>
+                <span class="page-description">Quotes.</span>
+                <span class="page-date">2023&#x2F;06&#x2F;01</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <h1 id="quotes">Quotes</h1>
+<blockquote>
+<p>&quot;I wish it need not have happened in my time,&quot; said Frodo. </p>
+<p>&quot;So do I,&quot; said Gandalf, &quot;and so do all who live to see such times. But that is not for them to decide. All we have to decide is what to do with the time that is given us.&quot;</p>
+<pre><code>          - The Fellowship of the Ring, J.R.R. Tolkien
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>Nolite te bastardes, carborundorum. </p>
+<pre><code>          - The Wall in Handmaid&#x27;s Tale by Margaret Atwood
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>Where there is an emptiness, the mind will obligingly fill it up. Fear is always at hand to supply any vacancies, as is curiosity. </p>
+<pre><code>          - Agnes in The Testaments by Margaret Atwood
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>The sense of wonder seems to me to be the way of seeing which allows things to appear as what they are, since it holds off our tendencies to make things fit into the theories or opinions we already hold, or to use things for purposes that have nothing to do with them.</p>
+<pre><code>          - Introduction to Nicomachean Ethics, Joe Sachs
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>In fact, while we read a novel, we are insane - Bonkers. We believe in the existence of people who aren't there, we hear their voices, we watch the battle of Borodin with them, we may even become Napoleon. Sanity returns (in most cases) when the book is closed. </p>
+<pre><code>          - Introduction to the Left Hand of Darkness, Ursula K. LeGuin
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, you have no idea where you might be swept off to.</p>
+<pre><code>          - Bilbo Baggins in The Fellowship of the Ring, J. R. R. Tolkien
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>People would do anything rather than admit their lives have no meaning. No use, that is. No plot. </p>
+<pre><code>          - Offred in The Handmaid&#x27;s Tale, Margaret Atwood
+</code></pre>
+</blockquote>
+<hr />
+<blockquote>
+<p>To oppose something is to maintain it. [...] To oppose vulgarity is inevitably to be vulgar. You must go somewhere else; you must have another goal; then you walk a different road. </p>
+<pre><code>          - Estraven, the Left Hand of Darkness</code></pre>
+</blockquote>
+
+        </div>
+        
+        
+
+        
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Parker Lamb</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:parker@plamb.com">parker@plamb.com</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Center normal images
+  $("p").each( function(index, element) {
+    const items = $(this)[0].children;
+    if (items.length > 0 && items[0].tagName == 'IMG') {
+      $(this).css("text-align", "center");
+    }
+  } )
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+      })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<!-- Math rendering -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'] ]}});
+</script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+
+  <title>Day 10 - Diagnostics</title>
+  <meta name="description" content="Problem solving with a strong stench of petrol.">
+  
+  
+  <link rel="icon" type="image/x-icon" href="&#x2F;images&#x2F;favicon.ico">
+  
+
+  <link rel="stylesheet" href="https://www.andromeda.is/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" />
+</head>
+
+
+    <body>
+
+        
+
+        <div class="header-image-container">
+            <h1 class="andromeda-header-text">
+                <a href="https:&#x2F;&#x2F;www.andromeda.is">Andromeda</a>
+            </h1>
+            <div class="header-image lozad" data-background-image="https:&#x2F;&#x2F;live.staticflickr.com&#x2F;65535&#x2F;52909171098_4393e4036c_k_d.jpg" data-placeholder-background="darkgrey"></div>
+            <div class="text-container">
+                <h1 class="page-title">Day 10 - Diagnostics</h1>
+                <span class="page-description">Problem solving with a strong stench of petrol.</span>
+                <span class="page-date">2023&#x2F;05&#x2F;19</span>
+            </div>
+        </div>
+        <div class="body-container">
+            <blockquote>
+<p>I pull out a chair in the library and sit, exhausted. A strong whiff of gasoline drifts past my nose. I stink. But there's an underlying sense of satisfaction beneath it. I glance around the table. Nobody close. Good. </p>
+</blockquote>
+<p>Today was officially a good day for one very good reason: I've officially made it to two of the three categories of ownership!</p>
+<p><strong>Blood</strong>, <strong>sweat</strong> and <del><strong>tears</strong></del>. </p>
+<p>I've sweated. It's hot and humid here. Today marked the first occasion of blood; I banged up my knuckles while trying to convince a stubborn hose onto an inlet. No tears yet, though I came awful close to them a bit ago.</p>
+<p>Maybe two out of three is enough?</p>
+<hr />
+<p>Anyway. Sorry, dear reader, for the delay - I've been spending most of my time reading and catching up on work, with a bit of socializing here and there. </p>
+<p>I fear my work may not be of interest to most of you; so I'll avoid talking about it in the main gist here. But, if you decide you are indeed interested in the nitty gritty of feature recognition in images, <a href="https://blog.andromeda.is/work/">I'll be keeping track of it here</a>. </p>
+<p>City pictures!</p>
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52909171033_f55f217cef_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52909171033_3960b7cbfb_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52909171098_4393e4036c_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52909171098_bc03eb9095_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52908143567_4545d8359e_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52908143567_085d274ee2_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52909170638_8c8c3a4bbb_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52909170638_c92e733a19_c_d.jpg"></a>
+    <a href="https://live.staticflickr.com/65535/52908866719_26c6e8c615_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52908866719_1322d471ae_c_d.jpg"></a>
+</div>
+<h2 id="motorcycle">Motorcycle</h2>
+<p>I'm a bit embarrassed here - I got the tank off the bike for the first time today and did my first deep inspection. Turns out, <em>nope</em>, there's <strong>definitely</strong> a carbureator. My EFI dreams will remain just that for now. </p>
+<p>The carb was in good condition; I didn't get into the float bowl as that would have required more disassembly than I was willing to get into, but things were clean as far as I could tell. I'm hoping to avoid doing a full carb disassembly; but if I have to I will. </p>
+<p>I suspect I might know what the issue may be, though.</p>
+<p>In a fuel tank, as fuel drains it needs to be replaced by something to avoid a vaccuum. That <em>something</em> tends to be air - it's supplied through the fuel vent hose. </p>
+<p><img src="/images/svg/fuel-venting.svg" alt="Fuel tank diagram" /></p>
+<p>This fuel vent hose was, interestingly enough, disconnected. The connector for the hose was rusted over. </p>
+<p><strong>Problem</strong>: motorcycle periodically (and randomly) dies. This death is characteristic of running out of fuel. </p>
+<p><strong>Hypothesis</strong>: this death is caused by a (small) clog in the <strong>vent hose</strong>. The creation of a vaccuum in the tank would would lead to the cylinders not being able to get sufficient fuel - hence - death by fuel starvation.</p>
+<p><strong>Supporting ideas</strong>: </p>
+<ul>
+<li>Air wouldn't be able to get into the fuel tank to equalize pressure with the fuel. This clog might not be total - air must be getting in somehow, otherwise the deaths would be more common. </li>
+<li>The previous owner of the bike said he replaced the fuel cap from a vented version to one that isn't - i.e. one that allowed air in to one that didn't. </li>
+<li>Whenever I remove the gas cap, there's a slight <em>pop</em> of inrushing air. Indicating there's some pressure inside. </li>
+</ul>
+<p><strong>Solution idea</strong>: Make the cap a vented version. </p>
+<p>A wire coat hanger sticking across the seal of the cap would work; or, we drill a small hole in the base of the current gas cap, let it vent through the keyhole. </p>
+<p>The drill idea would be ideal. Let's try it out tomorrow. </p>
+<p>In other news, I was feeling like the DIY sads are a <em>bit</em> janky. Not full jank - maybe just, like, 28% jank. I'm worried the M10 bolts are going to somehow disengage from the bike frame which would lead to the crates falling. </p>
+<p>Solution?</p>
+<div class="gallery">
+    <a href="https://live.staticflickr.com/65535/52908716031_22d8740186_k_d.jpg" data-ngthumb="https://live.staticflickr.com/65535/52908716031_a874a134a0_c_d.jpg"></a>
+</div>
+<p><strong>Paracord</strong>. Right up there with duct tape and towels in terms of usefulness.</p>
+<p>If the crates come loose from the main frame, the other side will support it - at least until I can come to a safe stop and figure out something long term from there. It's not a perfect solution, but it takes me from 28% jank to ~11% jank. </p>
+
+        </div>
+        
+        
+
+        
+<div class="footer-black">
+  <div class="text-block">
+    
+    <p>By Parker Lamb</p>
+    
+    
+    <p>Drop me a letter at <a href="mailto:parker@plamb.com">parker@plamb.com</a></p>
+    
+    
+    <p class="license">This site is licensed CC BY-NC 2.0</p>
+    
+  </div>
+</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+<script>
+  // Add lazy loading to all elements
+  const elements = document.querySelectorAll('body *');
+  elements.forEach((element) => {
+    element.classList.add('lozad');
+    element.setAttribute('data-loaded', 'false')
+  });
+  const obs = lozad();
+  obs.observe();
+
+  // Center normal images
+  $("p").each( function(index, element) {
+    const items = $(this)[0].children;
+    if (items.length > 0 && items[0].tagName == 'IMG') {
+      $(this).css("text-align", "center");
+    }
+  } )
+
+  // Gallery setup
+  $(".gallery").each( function( index, element ) {
+    const items = $(this)[0].children.length;
+    if (items == 1) {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        thumbnailHeight: 'auto', thumbnailWidth: $( window ).width(),
+        thumbnailBorderHorizontal: 1,
+        thumbnailBorderVertical: 1,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }   
+      })
+    } else if (items == 2) {
+        $(this).nanogallery2({
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'fullContent',
+          // gallerySorting: 'random',
+          thumbnailHeight: '400', thumbnailWidth: 'auto',
+          thumbnailAlignment: 'center',
+          thumbnailBaseGridHeight: 100,
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 2,
+          thumbnailBorderVertical: 2,
+
+          // THUMBNAIL TOOLS & LABEL
+          thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'fadeIn',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30,
+
+          // // THUMBNAIL'S HOVER ANIMATION
+          // thumbnailHoverEffect2: 'imageScaleIn90',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+          
+          // DEEP LINKING
+          locationHash: false,
+
+          // VIEWER TOOLBAR CONFIG
+          viewerTools:    {
+            topLeft:    'pageCounter',
+            topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+          }   
+      });
+    } else {
+      $(this).nanogallery2({
+        // GALLERY AND THUMBNAIL LAYOUT
+        galleryDisplayMode: 'fullContent',
+        // gallerySorting: 'random',
+        thumbnailHeight: '250', thumbnailWidth: 'auto',
+        thumbnailAlignment: 'center',
+        thumbnailBaseGridHeight: 100,
+        thumbnailL1GutterWidth: 4,
+        thumbnailL1GutterHeight: 4,
+        thumbnailBorderHorizontal: 2,
+        thumbnailBorderVertical: 2,
+
+        // THUMBNAIL TOOLS & LABEL
+        thumbnailLabel: { display: false, position:'onBottom', hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+
+        // DISPLAY ANIMATION
+        thumbnailDisplayTransition: 'fadeIn',
+        thumbnailDisplayTransitionDuration: 500,
+        thumbnailDisplayInterval: 30,
+
+        // // THUMBNAIL'S HOVER ANIMATION
+        // thumbnailHoverEffect2: 'imageScaleIn90',
+        touchAnimation: true,
+        touchAutoOpenDelay: 800,
+
+        // DEEP LINKING
+        locationHash: false,
+
+        // VIEWER TOOLBAR CONFIG
+        viewerTools:    {
+          topLeft:    'pageCounter',
+          topRight:   'downloadButton, zoomButton, fullscreenButton, closeButton'
+        }
+      });
+    }
+  });
+</script>
+<!-- Math rendering -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'] ]}});
+</script>
+
+
+    </body>
+
+</html>

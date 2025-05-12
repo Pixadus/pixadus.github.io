@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "f908995d516570df",
+    "type": "split",
+    "children": [
+      {
+        "id": "9400da1a2adee092",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1a400ee6384c43a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "entries/vents.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vents"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "716e1326c0ec6cdf",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2639dacfe5d65e6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "93bacd8f83ed7403",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "86ec7319a112cc66",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "064bfc09dcf34a32",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1fa9f1e4e997695b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b3910039004b1728",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb876ce600b34362",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "entries/vents.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for vents"
+            }
+          },
+          {
+            "id": "976fa95fc8e99959",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "entries/vents.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from vents"
+            }
+          },
+          {
+            "id": "e391122a690897e3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ec628ae1daf1717c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "entries/vents.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of vents"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
+    }
+  },
+  "active": "f1a400ee6384c43a",
+  "lastOpenFiles": [
+    "entries/electrical.md",
+    "entries/head.md",
+    "entries/mold.md",
+    "entries/refrigerator.md",
+    "entries/sail-cleaning.md",
+    "entries/vents.md",
+    "SUMMARY.md",
+    "entries/images/vents/bathroom-vent.jpg",
+    "entries/images/baby.png",
+    "entries/images/baby.jpeg",
+    "entries/images/seal.gif",
+    "entries/images/head-out.png",
+    "entries/images/head.png",
+    "entries/images/head",
+    "entires/head.md",
+    "entires",
+    "welcome.md",
+    "Finances.md",
+    "Intro.md",
+    "intro.md.md",
+    "Untitled",
+    "entries/images/mold-cabinet.jpg",
+    "entries/images/measurements.png",
+    "entries/images/current-rh.png",
+    "entries/images/mold-rh.png",
+    "entries/images/mold-mildew.png.crswap",
+    "entries/images/mold-mildew.crswap",
+    "entries/images/mold-mildew",
+    "entries/images",
+    "entries/sail-cleaning 1.md",
+    "entries",
+    "sail-cdea",
+    "day-one.md",
+    "images/sailboat-cropped.png.crswap",
+    "dotfiles.md",
+    "_functions.md",
+    "mini/troubleshooting.md",
+    "_functions.md.md",
+    "MRO Paper Thing.md",
+    "tools.md",
+    "datasheets/Hale.md",
+    "mini/images/troubleshooting 2024-06-27 15.43.39.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-27 15.40.18.excalidraw.md",
+    "Excalidraw/Drawing 2024-06-27 15.40.01.excalidraw.md",
+    "chapter_1.md"
+  ]
+}
