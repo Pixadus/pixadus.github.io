@@ -8,9 +8,8 @@ theme = "andromeda"
 [extra]
 header_links = [
     # {name = "Projects", url = "/https://igneousearth.github.io/projects/pic16/pic16f88.html"},
-    {name = "S/V Endurance", url="/ship/"},
-    {name = "University Notes", url = "https://igneousearth.github.io/"},
-    {name = "Photojournals", url = "/blog"},
+    {name = "University notes", url = "https://igneousearth.github.io/"},
+    {name = "Photojournal", url = "/blog"},
     ]
 license = "CC BY-NC 2.0"
 favicon = "/images/favicon.ico"
